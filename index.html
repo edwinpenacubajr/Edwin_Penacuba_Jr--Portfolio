@@ -3,3912 +3,802 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description"
-content="Edwin Peñacuba Jr. — Warehouse & Logistics Supervisor, Administrative Support, Data Entry, Customer Service, Technology Sales and Operations Professional.">
-
-<meta name="keywords"
-content="Edwin Peñacuba Jr, Virtual Assistant, Warehouse Supervisor, Logistics, Administrative Support, Data Entry, Customer Service, Technology Sales">
-
+<meta name="description" content="Edwin Peñacuba Jr. — Warehouse & Logistics Supervisor, Administrative Support, Data Entry, Customer Service, Technology Sales and Operations Professional.">
+<meta name="keywords" content="Edwin Peñacuba Jr, Virtual Assistant, Warehouse Supervisor, Logistics, Administrative Support, Data Entry, Customer Service, Technology Sales">
 <title>Edwin Peñacuba Jr. | Operations & Virtual Assistant</title>
-
+<noscript><style>.reveal{opacity:1;transform:none}.skill-fill{width:100%}</style></noscript>
 <style>
-
-/* =========================================================
-   ROOT
-========================================================= */
-
-:root {
-    --bg: #f8fafc;
-    --bg-secondary: #ffffff;
-    --card: rgba(255,255,255,0.78);
-    --text: #0f172a;
-    --muted: #64748b;
-
-    --blue: #2563eb;
-    --blue-light: #60a5fa;
-    --blue-soft: #eff6ff;
-
-    --purple: #7c3aed;
-
-    --border: rgba(148,163,184,0.25);
-    --nav: rgba(255,255,255,0.78);
-
-    --dark: #020617;
-    --shadow: rgba(15,23,42,0.10);
-}
-
-[data-theme="dark"] {
-
-    --bg: #020617;
-    --bg-secondary: #0f172a;
-
-    --card: rgba(15,23,42,0.78);
-
-    --text: #f8fafc;
-    --muted: #94a3b8;
-
-    --blue: #60a5fa;
-    --blue-light: #93c5fd;
-
-    --blue-soft: rgba(37,99,235,0.12);
-
-    --border: rgba(148,163,184,0.18);
-
-    --nav: rgba(2,6,23,0.78);
-
-    --shadow: rgba(0,0,0,0.35);
-}
-
-
-/* =========================================================
-   RESET
-========================================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-
-    font-family:
-        Inter,
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    background: var(--bg);
-
-    color: var(--text);
-
-    line-height: 1.6;
-
-    overflow-x: hidden;
-
-    transition:
-        background .3s ease,
-        color .3s ease;
-}
-
-a {
-    color: inherit;
-}
-
-
-/* =========================================================
-   BACKGROUND
-========================================================= */
-
-.cursor-glow {
-
-    position: fixed;
-
-    width: 350px;
-    height: 350px;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(37,99,235,.13),
-            transparent 70%
-        );
-
-    pointer-events: none;
-
-    transform: translate(-50%, -50%);
-
-    z-index: -1;
-
-    transition:
-        left .15s ease,
-        top .15s ease;
-}
-
-
-.bg-orb {
-
-    position: fixed;
-
-    width: 350px;
-    height: 350px;
-
-    border-radius: 50%;
-
-    filter: blur(90px);
-
-    opacity: .16;
-
-    pointer-events: none;
-
-    z-index: -2;
-}
-
-.orb-one {
-
-    background: #2563eb;
-
-    top: 5%;
-    left: -100px;
-
-    animation:
-        floatOrb 12s ease-in-out infinite;
-}
-
-.orb-two {
-
-    background: #7c3aed;
-
-    right: -120px;
-    top: 50%;
-
-    animation:
-        floatOrb 15s ease-in-out infinite reverse;
-}
-
-@keyframes floatOrb {
-
-    0%,100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(70px);
-    }
-}
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-nav {
-
-    position: fixed;
-
-    top: 15px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width:
-        min(1100px, calc(100% - 30px));
-
-    z-index: 1000;
-
-    background: var(--nav);
-
-    backdrop-filter: blur(18px);
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 10px 40px var(--shadow);
-}
-
-.navbar {
-
-    height: 68px;
-
-    padding:
-        0 20px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-.logo {
-
-    text-decoration: none;
-
-    font-size: 23px;
-
-    font-weight: 800;
-
-    letter-spacing: -1px;
-}
-
-.logo span {
-    color: var(--blue);
-}
-
-.navlinks {
-
-    display: flex;
-
-    gap: 5px;
-}
-
-.navlinks a {
-
-    text-decoration: none;
-
-    color: var(--muted);
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    padding:
-        10px 13px;
-
-    border-radius: 10px;
-
-    transition: .25s;
-}
-
-.navlinks a:hover,
-.navlinks a.active {
-
-    color: var(--blue);
-
-    background:
-        var(--blue-soft);
-}
-
-.nav-actions {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-}
-
-.theme-toggle,
-.menu-toggle {
-
-    width: 40px;
-    height: 40px;
-
-    border:
-        1px solid var(--border);
-
-    background:
-        var(--card);
-
-    color:
-        var(--text);
-
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    font-size: 17px;
-}
-
-.menu-toggle {
-    display: none;
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero {
-
-    min-height: 100vh;
-
-    display: flex;
-
-    align-items: center;
-
-    padding:
-        150px 20px 90px;
-
-    position: relative;
-}
-
-.hero-grid {
-
-    width:
-        min(1100px, 100%);
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        1.35fr .8fr;
-
-    gap: 70px;
-
-    align-items: center;
-}
-
-.badge {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    background:
-        var(--blue-soft);
-
-    border:
-        1px solid var(--border);
-
-    color:
-        var(--blue);
-
-    padding:
-        8px 14px;
-
-    border-radius: 50px;
-
-    font-size: 12px;
-
-    font-weight: 800;
-
-    letter-spacing: .7px;
-
-    margin-bottom: 22px;
-}
-
-.badge::before {
-
-    content: "";
-
-    width: 8px;
-    height: 8px;
-
-    background: #22c55e;
-
-    border-radius: 50%;
-
-    box-shadow:
-        0 0 0 5px rgba(34,197,94,.12);
-
-    animation:
-        pulse 2s infinite;
-}
-
-@keyframes pulse {
-
-    0%,100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.3);
-    }
-}
-
-.hero h1 {
-
-    font-size:
-        clamp(45px, 7vw, 76px);
-
-    line-height: 1;
-
-    letter-spacing: -4px;
-
-    max-width: 800px;
-
-    margin-bottom: 25px;
-}
-
-.gradient-text {
-
-    background:
-        linear-gradient(
-            90deg,
-            #2563eb,
-            #7c3aed,
-            #2563eb
-        );
-
-    background-size:
-        200% auto;
-
-    color: transparent;
-
-    background-clip: text;
-
-    -webkit-background-clip: text;
-
-    animation:
-        gradientMove 4s linear infinite;
-}
-
-@keyframes gradientMove {
-
-    to {
-        background-position:
-            200% center;
-    }
-}
-
-.hero-description {
-
-    color:
-        var(--muted);
-
-    font-size: 18px;
-
-    max-width: 680px;
-}
-
-.buttons {
-
-    display: flex;
-
-    gap: 12px;
-
-    margin-top: 32px;
-
-    flex-wrap: wrap;
-}
-
-.btn {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 8px;
-
-    padding:
-        13px 21px;
-
-    border-radius: 11px;
-
-    text-decoration: none;
-
-    font-weight: 700;
-
-    border:
-        1px solid var(--border);
-
-    transition:
-        transform .25s,
-        box-shadow .25s;
-}
-
-.btn:hover {
-
-    transform:
-        translateY(-3px);
-
-    box-shadow:
-        0 12px 30px var(--shadow);
-}
-
-.btn-primary {
-
-    color: white;
-
-    background:
-        linear-gradient(
-            135deg,
-            #2563eb,
-            #4f46e5
-        );
-
-    border: none;
-}
-
-.btn-secondary {
-
-    background:
-        var(--card);
-
-    color:
-        var(--text);
-}
-
-.btn-resume {
-
-    background:
-        linear-gradient(
-            135deg,
-            #0f172a,
-            #334155
-        );
-
-    color: white;
-
-    border:
-        1px solid rgba(255,255,255,.08);
-}
-
-
-/* =========================================================
-   PROFILE CARD
-========================================================= */
-
-.profile-wrapper {
-    perspective: 1000px;
-}
-
-.profile-card {
-
-    position: relative;
-
-    padding: 30px;
-
-    border-radius: 28px;
-
-    background:
-        var(--card);
-
-    backdrop-filter:
-        blur(20px);
-
-    border:
-        1px solid var(--border);
-
-    box-shadow:
-        0 30px 70px var(--shadow);
-
-    transform-style:
-        preserve-3d;
-
-    transition:
-        transform .2s ease;
-
-    animation:
-        cardFloat 5s ease-in-out infinite;
-}
-
-@keyframes cardFloat {
-
-    0%,100% {
-        transform:
-            translateY(0);
-    }
-
-    50% {
-        transform:
-            translateY(-10px);
-    }
-}
-
-.profile-card::before {
-
-    content: "";
-
-    position: absolute;
-
-    inset: -1px;
-
-    border-radius: 28px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(37,99,235,.35),
-            transparent 50%,
-            rgba(124,58,237,.3)
-        );
-
-    z-index: -1;
-
-    opacity: .5;
-}
-
-.avatar {
-
-    width: 105px;
-    height: 105px;
-
-    border-radius: 50%;
-
-    display: grid;
-
-    place-items: center;
-
-    color: white;
-
-    font-size: 38px;
-
-    font-weight: 900;
-
-    background:
-        linear-gradient(
-            135deg,
-            #2563eb,
-            #7c3aed
-        );
-
-    box-shadow:
-        0 15px 40px rgba(37,99,235,.3);
-
-    margin-bottom: 20px;
-}
-
-.profile-card h3 {
-    font-size: 25px;
-}
-
-.profile-card > p {
-
-    color:
-        var(--muted);
-
-    font-size: 14px;
-}
-
-.info {
-    margin-top: 22px;
-}
-
-.info div {
-
-    display: flex;
-
-    justify-content:
-        space-between;
-
-    gap: 15px;
-
-    padding: 11px 0;
-
-    border-bottom:
-        1px solid var(--border);
-
-    font-size: 13px;
-}
-
-.info span {
-    color: var(--muted);
-}
-
-
-/* =========================================================
-   SECTIONS
-========================================================= */
-
-section {
-    padding:
-        110px 20px;
-}
-
-.container {
-
-    width:
-        min(1100px, 100%);
-
-    margin: auto;
-}
-
-.section-head {
-    margin-bottom: 45px;
-}
-
-.eyebrow {
-
-    color:
-        var(--blue);
-
-    font-size: 12px;
-
-    font-weight: 900;
-
-    text-transform:
-        uppercase;
-
-    letter-spacing: 2px;
-}
-
-h2 {
-
-    font-size:
-        clamp(34px, 5vw, 48px);
-
-    line-height: 1.1;
-
-    letter-spacing: -2px;
-
-    margin-top: 7px;
-}
-
-.section-head p {
-
-    color:
-        var(--muted);
-
-    max-width: 700px;
-
-    margin-top: 12px;
-}
-
-
-/* =========================================================
-   REVEAL
-========================================================= */
-
-.reveal {
-
-    opacity: 0;
-
-    transform:
-        translateY(35px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-}
-
-.reveal.visible {
-
-    opacity: 1;
-
-    transform:
-        translateY(0);
-}
-
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.about-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 60px;
-}
-
-.about-text {
-
-    color:
-        var(--muted);
-
-    font-size: 16px;
-}
-
-.about-text strong {
-    color: var(--text);
-}
-
-.skills {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 18px;
-}
-
-.skill-item {
-
-    background:
-        var(--card);
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 13px;
-
-    padding: 15px;
-
-    transition: .25s;
-}
-
-.skill-item:hover {
-
-    transform:
-        translateY(-4px);
-
-    border-color:
-        rgba(37,99,235,.35);
-}
-
-.skill-top {
-
-    display: flex;
-
-    justify-content:
-        space-between;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    margin-bottom: 9px;
-}
-
-.skill-top span {
-
-    color:
-        var(--blue);
-}
-
-.skill-bar {
-
-    height: 6px;
-
-    border-radius: 10px;
-
-    background:
-        var(--border);
-
-    overflow: hidden;
-}
-
-.skill-fill {
-
-    height: 100%;
-
-    width: 0;
-
-    border-radius: inherit;
-
-    background:
-        linear-gradient(
-            90deg,
-            #2563eb,
-            #7c3aed
-        );
-
-    transition:
-        width 1.5s cubic-bezier(.2,.8,.2,1);
-}
-
-
-/* =========================================================
-   HIGHLIGHTS
-========================================================= */
-
-.highlight-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap: 18px;
-
-    margin-top: 40px;
-}
-
-.highlight {
-
-    padding: 25px;
-
-    border:
-        1px solid var(--border);
-
-    background:
-        var(--card);
-
-    border-radius: 18px;
-
-    text-align: center;
-}
-
-.highlight-number {
-
-    font-size: 28px;
-
-    font-weight: 900;
-
-    color:
-        var(--blue);
-}
-
-.highlight p {
-
-    color:
-        var(--muted);
-
-    font-size: 13px;
-
-    margin-top: 5px;
-}
-
-
-/* =========================================================
-   SERVICES
-========================================================= */
-
-.services-section {
-
-    background:
-        var(--bg-secondary);
-}
-
-.cards {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap: 20px;
-}
-
-.card {
-
-    position: relative;
-
-    padding: 28px;
-
-    border-radius: 20px;
-
-    background:
-        var(--card);
-
-    border:
-        1px solid var(--border);
-
-    overflow: hidden;
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease,
-        border-color .3s ease;
-}
-
-.card::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 120px;
-    height: 120px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(37,99,235,.12);
-
-    filter:
-        blur(25px);
-
-    top: -70px;
-    right: -70px;
-
-    transition: .3s;
-}
-
-.card:hover {
-
-    transform:
-        translateY(-10px);
-
-    box-shadow:
-        0 25px 50px var(--shadow);
-
-    border-color:
-        rgba(37,99,235,.35);
-}
-
-.card:hover::after {
-
-    transform:
-        scale(1.8);
-}
-
-.icon {
-
-    width: 52px;
-    height: 52px;
-
-    display: grid;
-
-    place-items: center;
-
-    border-radius: 14px;
-
-    background:
-        var(--blue-soft);
-
-    font-size: 25px;
-
-    margin-bottom: 20px;
-}
-
-.card h3 {
-
-    margin-bottom: 8px;
-
-    font-size: 19px;
-}
-
-.card p {
-
-    color:
-        var(--muted);
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   EXPERIENCE
-========================================================= */
-
-.timeline {
-    position: relative;
-}
-
-.timeline::before {
-
-    content: "";
-
-    position: absolute;
-
-    left: 8px;
-
-    top: 0;
-    bottom: 0;
-
-    width: 2px;
-
-    background:
-        var(--border);
-}
-
-.experience {
-
-    position: relative;
-
-    display: grid;
-
-    grid-template-columns:
-        190px 1fr;
-
-    gap: 30px;
-
-    padding:
-        0 0 50px 40px;
-}
-
-.experience::before {
-
-    content: "";
-
-    position: absolute;
-
-    left: 2px;
-
-    top: 4px;
-
-    width: 14px;
-    height: 14px;
-
-    border-radius: 50%;
-
-    background:
-        var(--blue);
-
-    box-shadow:
-        0 0 0 5px var(--blue-soft);
-}
-
-.date {
-
-    color:
-        var(--blue);
-
-    font-size: 13px;
-
-    font-weight: 800;
-}
-
-.company {
-
-    color:
-        var(--muted);
-
-    font-size: 14px;
-
-    margin-top: 3px;
-}
-
-.experience h3 {
-
-    font-size: 21px;
-}
-
-.experience p {
-
-    color:
-        var(--muted);
-
-    margin-top: 10px;
-}
-
-.experience ul {
-
-    color:
-        var(--muted);
-
-    margin-top: 12px;
-
-    padding-left: 20px;
-
-    font-size: 14px;
-}
-
-.experience li {
-    margin-bottom: 5px;
-}
-
-
-/* =========================================================
-   EDUCATION / TRAINING
-========================================================= */
-
-.education-section {
-
-    background:
-        var(--bg-secondary);
-}
-
-.education-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 22px;
-}
-
-.education-card {
-
-    padding: 28px;
-
-    background:
-        var(--card);
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 20px;
-
-    transition: .3s;
-}
-
-.education-card:hover {
-
-    transform:
-        translateY(-6px);
-
-    border-color:
-        rgba(37,99,235,.35);
-}
-
-.education-icon {
-
-    width: 50px;
-    height: 50px;
-
-    display: grid;
-
-    place-items: center;
-
-    border-radius: 14px;
-
-    background:
-        var(--blue-soft);
-
-    font-size: 23px;
-
-    margin-bottom: 18px;
-}
-
-.education-card h3 {
-
-    font-size: 19px;
-
-    margin-bottom: 5px;
-}
-
-.education-card .school {
-
-    color:
-        var(--blue);
-
-    font-weight: 700;
-
-    font-size: 14px;
-}
-
-.education-card .date-small {
-
-    color:
-        var(--muted);
-
-    font-size: 13px;
-
-    margin-top: 4px;
-}
-
-.education-card p {
-
-    color:
-        var(--muted);
-
-    font-size: 14px;
-
-    margin-top: 12px;
-}
-
-
-/* =========================================================
-   TRAINING DETAILS
-========================================================= */
-
-.training-list {
-
-    margin-top: 15px;
-}
-
-.training-list li {
-
-    color:
-        var(--muted);
-
-    font-size: 13px;
-
-    margin-bottom: 9px;
-}
-
-
-/* =========================================================
-   PROJECTS
-========================================================= */
-
-.projects-section {
-
-    background:
-        var(--bg-secondary);
-}
-
-.project {
-
-    position: relative;
-
-    min-height: 260px;
-
-    padding: 30px;
-
-    border-radius: 22px;
-
-    color: white;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            145deg,
-            #0f172a,
-            #111827
-        );
-
-    transition:
-        transform .35s ease;
-}
-
-.project::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 250px;
-    height: 250px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(37,99,235,.25);
-
-    filter:
-        blur(70px);
-
-    right: -80px;
-    bottom: -100px;
-}
-
-.project:hover {
-
-    transform:
-        translateY(-10px)
-        rotateX(2deg);
-}
-
-.project-content {
-
-    position: relative;
-
-    z-index: 2;
-
-    height: 100%;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-}
-
-.project-tag {
-
-    color:
-        #93c5fd;
-
-    font-size: 11px;
-
-    font-weight: 900;
-
-    letter-spacing: 1.5px;
-
-    text-transform:
-        uppercase;
-
-    margin-bottom: 9px;
-}
-
-.project h3 {
-
-    font-size: 21px;
-}
-
-.project p {
-
-    color:
-        #cbd5e1;
-
-    margin-top: 10px;
-
-    font-size: 14px;
-}
-
-.project-tools {
-
-    margin-top: 25px;
-
-    color:
-        #93c5fd;
-
-    font-size: 12px;
-
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact {
-
-    color: white;
-
-    background:
-        radial-gradient(
-            circle at 20% 30%,
-            rgba(37,99,235,.35),
-            transparent 35%
-        ),
-        #020617;
-}
-
-.contact-box {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 40px;
-}
-
-.contact h2 {
-    margin-top: 5px;
-}
-
-.contact p {
-
-    color:
-        #cbd5e1;
-
-    max-width: 650px;
-
-    margin-top: 12px;
-}
-
-.contact-details {
-
-    margin-top: 20px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 7px;
-
-    color:
-        #cbd5e1;
-
-    font-size: 14px;
-}
-
-.contact-details a {
-
-    color:
-        #93c5fd;
-
-    text-decoration: none;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer {
-
-    background:
-        #01030a;
-
-    color:
-        #64748b;
-
-    text-align:
-        center;
-
-    padding:
-        25px;
-
-    font-size: 13px;
-}
-
-
-/* =========================================================
-   BACK TO TOP
-========================================================= */
-
-.back-top {
-
-    position: fixed;
-
-    right: 25px;
-    bottom: 25px;
-
-    width: 45px;
-    height: 45px;
-
-    display: grid;
-
-    place-items: center;
-
-    border-radius: 50%;
-
-    border:
-        1px solid var(--border);
-
-    background:
-        var(--card);
-
-    backdrop-filter:
-        blur(10px);
-
-    color:
-        var(--text);
-
-    cursor: pointer;
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    transform:
-        translateY(15px);
-
-    transition: .3s;
-
-    z-index: 500;
-}
-
-.back-top.show {
-
-    opacity: 1;
-
-    visibility: visible;
-
-    transform:
-        translateY(0);
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 850px) {
-
-    nav {
-        top: 10px;
-    }
-
-    .navlinks {
-
-        position: absolute;
-
-        top: 75px;
-
-        left: 0;
-        right: 0;
-
-        padding: 12px;
-
-        display: none;
-
-        flex-direction: column;
-
-        background:
-            var(--nav);
-
-        backdrop-filter:
-            blur(20px);
-
-        border:
-            1px solid var(--border);
-
-        border-radius:
-            15px;
-    }
-
-    .navlinks.open {
-        display: flex;
-    }
-
-    .navlinks a {
-        width: 100%;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .hero {
-        padding-top: 130px;
-    }
-
-    .hero-grid,
-    .about-grid,
-    .education-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-grid {
-        gap: 50px;
-    }
-
-    .cards {
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-    .skills {
-        grid-template-columns:
-            1fr;
-    }
-
-    .highlight-grid {
-        grid-template-columns:
-            1fr 1fr;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    section {
-        padding:
-            80px 20px;
-    }
-
-    .hero h1 {
-
-        font-size: 48px;
-
-        letter-spacing:
-            -3px;
-    }
-
-    .hero-description {
-        font-size: 16px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .experience {
-
-        grid-template-columns:
-            1fr;
-
-        gap: 5px;
-    }
-
-    .contact-box {
-
-        flex-direction:
-            column;
-
-        align-items:
-            flex-start;
-    }
-
-    .highlight-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-
-        animation-duration:
-            .01ms !important;
-
-        animation-iteration-count:
-            1 !important;
-
-        scroll-behavior:
-            auto !important;
-
-        transition-duration:
-            .01ms !important;
-    }
-}
-
+/* ROOT */
+:root{--bg:#f8fafc;--bg-secondary:#fff;--card:rgba(255,255,255,.78);--text:#0f172a;--muted:#55657a;--blue:#2563eb;--blue-light:#60a5fa;--blue-soft:#eff6ff;--purple:#7c3aed;--border:rgba(148,163,184,.25);--nav:rgba(255,255,255,.78);--dark:#020617;--shadow:rgba(15,23,42,.10);--glass:rgba(255,255,255,.62)}
+[data-theme="dark"]{--bg:#020617;--bg-secondary:#0f172a;--card:rgba(15,23,42,.78);--text:#f8fafc;--muted:#94a3b8;--blue:#60a5fa;--blue-light:#93c5fd;--blue-soft:rgba(37,99,235,.12);--border:rgba(148,163,184,.18);--nav:rgba(2,6,23,.78);--shadow:rgba(0,0,0,.35);--glass:rgba(2,6,23,.62)}
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;transition:background .3s ease,color .3s ease}
+a{color:inherit}
+/* BACKGROUND */
+.cursor-glow{position:fixed;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.13),transparent 70%);pointer-events:none;transform:translate(-50%,-50%);z-index:-1;transition:left .15s ease,top .15s ease}
+.bg-orb{position:fixed;width:350px;height:350px;border-radius:50%;filter:blur(90px);opacity:.16;pointer-events:none;z-index:-2}
+.orb-one{background:#2563eb;top:5%;left:-100px;animation:floatOrb 12s ease-in-out infinite}
+.orb-two{background:#7c3aed;right:-120px;top:50%;animation:floatOrb 15s ease-in-out infinite reverse}
+@keyframes floatOrb{0%,100%{transform:translateY(0)}50%{transform:translateY(70px)}}
+@media (hover:none){.cursor-glow{display:none}}
+/* NAV */
+nav{position:fixed;top:15px;left:50%;transform:translateX(-50%);width:min(1100px,calc(100% - 30px));z-index:1000;background:var(--nav);backdrop-filter:blur(18px);border:1px solid var(--border);border-radius:18px;box-shadow:0 10px 40px var(--shadow)}
+.navbar{height:68px;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{text-decoration:none;font-size:23px;font-weight:800;letter-spacing:-1px}
+.logo span{color:var(--blue)}
+.navlinks{display:flex;gap:5px}
+.navlinks a{text-decoration:none;color:var(--muted);font-size:14px;font-weight:600;padding:10px 13px;border-radius:10px;transition:.25s}
+.navlinks a:hover,.navlinks a.active{color:var(--blue);background:var(--blue-soft)}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.theme-toggle,.menu-toggle{width:40px;height:40px;border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:10px;cursor:pointer;font-size:17px}
+.menu-toggle{display:none}
+/* NAV ANIMATIONS */
+nav{animation:navDrop .8s cubic-bezier(.2,.8,.2,1) both;transition:top .3s ease,box-shadow .3s ease}
+@keyframes navDrop{from{opacity:0;transform:translateX(-50%) translateY(-40px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.navbar{transition:height .3s ease}
+nav.scrolled{top:8px;box-shadow:0 14px 50px var(--shadow)}
+nav.scrolled .navbar{height:58px}
+.logo span{display:inline-block;animation:dotBounce 2.2s ease-in-out infinite}
+@keyframes dotBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.navlinks a{position:relative;animation:navLinkIn .6s cubic-bezier(.2,.8,.2,1) both}
+.navlinks a:nth-child(1){animation-delay:.25s}.navlinks a:nth-child(2){animation-delay:.3s}.navlinks a:nth-child(3){animation-delay:.35s}.navlinks a:nth-child(4){animation-delay:.4s}.navlinks a:nth-child(5){animation-delay:.45s}.navlinks a:nth-child(6){animation-delay:.5s}.navlinks a:nth-child(7){animation-delay:.55s}.navlinks a:nth-child(8){animation-delay:.6s}
+@keyframes navLinkIn{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
+.navlinks a::after{content:"";position:absolute;left:50%;bottom:4px;width:0;height:2px;border-radius:2px;background:linear-gradient(90deg,#2563eb,#7c3aed);transition:width .3s ease,left .3s ease}
+.navlinks a:hover::after,.navlinks a.active::after{width:46%;left:27%}
+.theme-toggle{transition:transform .4s cubic-bezier(.2,.8,.2,1),background .25s}
+.theme-toggle:hover{transform:rotate(25deg) scale(1.08)}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:150px 20px 90px;position:relative}
+.hero-grid{width:min(1100px,100%);margin:auto;display:grid;grid-template-columns:1.35fr .8fr;gap:70px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--blue-soft);border:1px solid var(--border);color:var(--blue);padding:8px 14px;border-radius:50px;font-size:12px;font-weight:800;letter-spacing:.7px;margin-bottom:22px}
+.badge::before{content:"";width:8px;height:8px;background:#22c55e;border-radius:50%;box-shadow:0 0 0 5px rgba(34,197,94,.12);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
+.hero h1{font-size:clamp(45px,7vw,76px);line-height:1;letter-spacing:-4px;max-width:800px;margin-bottom:25px}
+.gradient-text{background:linear-gradient(90deg,#2563eb,#7c3aed,#2563eb);background-size:200% auto;color:transparent;background-clip:text;-webkit-background-clip:text;animation:gradientMove 4s linear infinite}
+@keyframes gradientMove{to{background-position:200% center}}
+.hero-description{color:var(--muted);font-size:18px;max-width:680px}
+.buttons{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 21px;border-radius:11px;text-decoration:none;font-weight:700;border:1px solid var(--border);transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px var(--shadow)}
+.btn-primary{color:#fff;background:linear-gradient(135deg,#2563eb,#4f46e5);border:none}
+.btn-secondary{background:var(--card);color:var(--text)}
+.btn-resume{background:linear-gradient(135deg,#0f172a,#334155);color:#fff;border:1px solid rgba(255,255,255,.08)}
+/* PROFILE CARD */
+.profile-wrapper{perspective:1000px;animation:cardFloat 5s ease-in-out infinite}
+.profile-card{position:relative;padding:30px;border-radius:28px;background:var(--card);backdrop-filter:blur(20px);border:1px solid var(--border);box-shadow:0 30px 70px var(--shadow);transform-style:preserve-3d;transition:transform .2s ease}
+@keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.profile-card::before{content:"";position:absolute;inset:-1px;border-radius:28px;background:linear-gradient(135deg,rgba(37,99,235,.35),transparent 50%,rgba(124,58,237,.3));z-index:-1;opacity:.5}
+.avatar{width:105px;height:105px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:38px;font-weight:900;background:linear-gradient(135deg,#2563eb,#7c3aed);box-shadow:0 15px 40px rgba(37,99,235,.3);margin-bottom:20px}
+.profile-card h3{font-size:25px}
+.profile-card>p{color:var(--muted);font-size:14px}
+.info{margin-top:22px}
+.info div{display:flex;justify-content:space-between;gap:15px;padding:11px 0;border-bottom:1px solid var(--border);font-size:13px}
+.info span{color:var(--muted)}
+/* MODERN HERO */
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(37,99,235,.22) 1.3px,transparent 1.3px);background-size:26px 26px;-webkit-mask-image:radial-gradient(ellipse at 30% 45%,#000 15%,transparent 70%);mask-image:radial-gradient(ellipse at 30% 45%,#000 15%,transparent 70%);pointer-events:none;z-index:-1}
+.typed-line{font-size:clamp(18px,2.4vw,24px);font-weight:700;color:var(--muted);margin-bottom:16px;min-height:1.6em}
+.typed-line #typed{display:inline-block;background:linear-gradient(90deg,#2563eb,#7c3aed);-webkit-background-clip:text;background-clip:text;color:transparent}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--blue);margin-left:3px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.btn-primary{position:relative;overflow:hidden}
+.btn-primary::after{content:"";position:absolute;top:0;left:-120%;width:55%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);animation:shimmer 3.5s ease-in-out infinite}
+@keyframes shimmer{60%,100%{left:170%}}
+.profile-wrapper{position:relative}
+.avatar{position:relative}
+.avatar{width:122px;height:122px}
+.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 50%;border:4px solid var(--bg-secondary);background:#fff}
+.avatar::after{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(120deg,transparent 38%,rgba(255,255,255,.65) 50%,transparent 62%);background-size:250% 100%;background-position:100% 0;animation:avatarShine 3.5s ease-in-out infinite;pointer-events:none}
+@keyframes avatarShine{from{background-position:100% 0}60%,100%{background-position:0 0}}
+.avatar::before{content:"";position:absolute;inset:-5px;border-radius:50%;background:conic-gradient(from 0deg,#2563eb,#7c3aed,#22d3ee,#2563eb);z-index:-1;animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.avatar-dot{position:absolute;right:4px;bottom:6px;width:18px;height:18px;border-radius:50%;background:#22c55e;border:3px solid var(--bg-secondary);box-shadow:0 0 0 4px rgba(34,197,94,.18)}
+.float-chip{position:absolute;z-index:3;padding:9px 14px;border-radius:14px;background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--border);box-shadow:0 14px 34px var(--shadow);font-size:12px;font-weight:800;white-space:nowrap;animation:chipBob 4s ease-in-out infinite}
+.chip-a{top:-18px;right:-14px}
+.chip-b{bottom:-18px;left:26px;animation-delay:-1.3s}
+.chip-c{bottom:-18px;right:26px;animation-delay:-2.6s}
+@keyframes chipBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media (max-width:850px){.float-chip{display:none}}
+/* SECTIONS */
+section{padding:110px 20px}
+.container{width:min(1100px,100%);margin:auto}
+.section-head{margin-bottom:45px}
+.eyebrow{color:var(--blue);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:2px}
+h2{font-size:clamp(34px,5vw,48px);line-height:1.1;letter-spacing:-2px;margin-top:7px}
+.section-head p{color:var(--muted);max-width:700px;margin-top:12px}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.about-text{color:var(--muted);font-size:16px}
+.about-text strong{color:var(--text)}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.skill-item{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:15px;transition:.25s}
+.skill-item:hover{transform:translateY(-4px);border-color:rgba(37,99,235,.35)}
+.skill-top{display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:9px}
+.skill-top span{color:var(--blue)}
+.skill-bar{height:6px;border-radius:10px;background:var(--border);overflow:hidden}
+.skill-fill{height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,#2563eb,#7c3aed);transition:width 1.5s cubic-bezier(.2,.8,.2,1)}
+/* MODERN SKILL BARS */
+.skills{gap:14px}
+.skill-item{position:relative;overflow:hidden;padding:16px 18px;border-radius:16px}
+.skill-item::after{content:"";position:absolute;width:110px;height:110px;border-radius:50%;background:rgba(37,99,235,.12);filter:blur(24px);top:-60px;right:-50px;transition:.3s;pointer-events:none}
+.skill-item:hover::after{transform:scale(1.8)}
+.skill-item:hover{box-shadow:0 14px 34px var(--shadow)}
+.skill-top strong{display:flex;align-items:center;gap:10px}
+.skill-ico{width:30px;height:30px;display:inline-grid;place-items:center;border-radius:9px;background:var(--blue-soft);font-size:15px}
+.skill-top span{font-variant-numeric:tabular-nums;font-size:14px;font-weight:800}
+.skill-bar{height:9px;overflow:visible}
+.skill-fill{position:relative;box-shadow:0 0 14px rgba(37,99,235,.45);overflow:visible}
+.skill-fill::before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.5) 50%,transparent 70%);background-size:200% 100%;animation:barShine 2.4s linear infinite}
+.skill-fill::after{content:"";position:absolute;right:-4px;top:50%;width:13px;height:13px;margin-top:-6.5px;border-radius:50%;background:#fff;border:3px solid #7c3aed;box-shadow:0 0 0 4px rgba(124,58,237,.18)}
+@keyframes barShine{from{background-position:200% 0}to{background-position:-200% 0}}
+.skills .skill-item:nth-child(1) .skill-fill{transition-delay:.05s}.skills .skill-item:nth-child(2) .skill-fill{transition-delay:.15s}.skills .skill-item:nth-child(3) .skill-fill{transition-delay:.25s}.skills .skill-item:nth-child(4) .skill-fill{transition-delay:.35s}.skills .skill-item:nth-child(5) .skill-fill{transition-delay:.45s}.skills .skill-item:nth-child(6) .skill-fill{transition-delay:.55s}
+/* HIGHLIGHTS */
+.highlight-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.highlight{padding:25px;border:1px solid var(--border);background:var(--card);border-radius:18px;text-align:center}
+.highlight-number{font-size:28px;font-weight:900;color:var(--blue)}
+.highlight p{color:var(--muted);font-size:13px;margin-top:5px}
+/* MODERN STAT CARDS */
+.highlight{position:relative;overflow:hidden;padding:26px 20px;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.highlight::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,#2563eb,#7c3aed);transform:scaleX(0);transform-origin:left;transition:transform .5s ease}
+.highlight::after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:rgba(37,99,235,.14);filter:blur(26px);top:-70px;right:-60px;transition:.3s;pointer-events:none}
+.highlight:hover{transform:translateY(-8px);box-shadow:0 22px 44px var(--shadow);border-color:rgba(37,99,235,.35)}
+.highlight:hover::before{transform:scaleX(1)}
+.highlight:hover::after{transform:scale(1.8)}
+.highlight-ico{width:46px;height:46px;margin:0 auto 12px;display:grid;place-items:center;border-radius:14px;background:var(--blue-soft);font-size:22px;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.highlight:hover .highlight-ico{transform:rotate(-8deg) scale(1.12)}
+.highlight-number{font-size:34px;line-height:1.1;letter-spacing:-1px;background:linear-gradient(90deg,#2563eb,#7c3aed);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+.highlight p{font-weight:600}
+/* SERVICES / CARDS */
+.services-section,.education-section,.projects-section{background:var(--bg-secondary)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{position:relative;padding:28px;border-radius:20px;background:var(--card);border:1px solid var(--border);overflow:hidden;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.card::after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:rgba(37,99,235,.12);filter:blur(25px);top:-70px;right:-70px;transition:.3s}
+.card:hover{transform:translateY(-10px);box-shadow:0 25px 50px var(--shadow);border-color:rgba(37,99,235,.35)}
+.card:hover::after{transform:scale(1.8)}
+.icon{width:52px;height:52px;display:grid;place-items:center;border-radius:14px;background:var(--blue-soft);font-size:25px;margin-bottom:20px}
+.card h3{margin-bottom:8px;font-size:19px}
+.card p{color:var(--muted);font-size:14px}
+/* EXPERIENCE */
+.timeline{position:relative}
+.timeline::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border)}
+.experience{position:relative;display:grid;grid-template-columns:190px 1fr;gap:30px;padding:0 0 50px 40px}
+.experience::before{content:"";position:absolute;left:2px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px var(--blue-soft)}
+.date{color:var(--blue);font-size:13px;font-weight:800}
+.company{color:var(--muted);font-size:14px;margin-top:3px}
+.experience h3{font-size:21px}
+.experience p{color:var(--muted);margin-top:10px}
+.experience ul{color:var(--muted);margin-top:12px;padding-left:20px;font-size:14px}
+.experience li{margin-bottom:5px}
+/* EDUCATION */
+.education-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.education-card{padding:28px;background:var(--card);border:1px solid var(--border);border-radius:20px;transition:.3s}
+.education-card:hover{transform:translateY(-6px);border-color:rgba(37,99,235,.35)}
+.education-icon{width:50px;height:50px;display:grid;place-items:center;border-radius:14px;background:var(--blue-soft);font-size:23px;margin-bottom:18px}
+.education-card h3{font-size:19px;margin-bottom:5px}
+.education-card .school{color:var(--blue);font-weight:700;font-size:14px}
+.education-card .date-small{color:var(--muted);font-size:13px;margin-top:4px}
+.education-card p{color:var(--muted);font-size:14px;margin-top:12px}
+.training-list{margin-top:15px;padding-left:20px}
+.training-list li{color:var(--muted);font-size:13px;margin-bottom:9px}
+/* TOOLS */
+.tools-wrap{margin-top:50px}
+.tools-title{font-size:22px;letter-spacing:-.5px;margin-bottom:22px}
+.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.tool-group{padding:24px;background:var(--card);border:1px solid var(--border);border-radius:20px}
+.tool-group h4{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--blue);margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:50px;background:var(--blue-soft);border:1px solid var(--border);font-size:13px;font-weight:700;transition:transform .25s,border-color .25s}
+.chip:hover{transform:translateY(-3px);border-color:rgba(37,99,235,.4)}
+/* PROJECTS (light cards, same look as Technical Skills) */
+.project{position:relative;min-height:260px;padding:28px;border-radius:20px;color:var(--text);overflow:hidden;background:var(--card);border:1px solid var(--border);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.project::before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:rgba(37,99,235,.12);filter:blur(25px);top:-70px;right:-70px;transition:.3s}
+.project:hover{transform:translateY(-10px);box-shadow:0 25px 50px var(--shadow);border-color:rgba(37,99,235,.35)}
+.project:hover::before{transform:scale(1.8)}
+.project-content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:space-between}
+.project-tag{color:var(--blue);font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:9px}
+.project h3{font-size:19px}
+.project p{color:var(--muted);margin-top:10px;font-size:14px}
+.project-tools{margin-top:25px;color:var(--blue);font-size:12px;font-weight:700}
+/* CONTACT */
+.contact{color:#fff;background:radial-gradient(circle at 20% 30%,rgba(37,99,235,.35),transparent 35%),#020617}
+.contact-box{display:flex;align-items:center;justify-content:space-between;gap:40px}
+.contact h2{margin-top:5px}
+.contact p{color:#cbd5e1;max-width:650px;margin-top:12px}
+.contact-details{margin-top:20px;display:flex;flex-direction:column;gap:7px;color:#cbd5e1;font-size:14px}
+.contact-details a{color:#93c5fd;text-decoration:none}
+/* FOOTER */
+footer{background:#01030a;color:#64748b;text-align:center;padding:25px;font-size:13px}
+/* BACK TO TOP */
+.back-top{position:fixed;right:25px;bottom:25px;width:45px;height:45px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--border);background:var(--card);backdrop-filter:blur(10px);color:var(--text);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(15px);transition:.3s;z-index:500}
+.back-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+/* MOBILE */
+@media (max-width:850px){
+nav{top:10px;background:transparent;backdrop-filter:none}
+nav::before{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--nav);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);z-index:-1}
+.navlinks{position:absolute;top:calc(100% + 10px);right:0;left:auto;width:max-content;min-width:150px;padding:8px;display:flex;flex-direction:column;gap:4px;background:var(--glass);backdrop-filter:blur(22px) saturate(180%);-webkit-backdrop-filter:blur(22px) saturate(180%);border:1px solid var(--border);border-radius:18px;box-shadow:0 24px 60px var(--shadow);transform-origin:top right;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-12px) scale(.92);transition:opacity .25s ease,transform .35s cubic-bezier(.2,.8,.2,1),visibility .25s}
+.navlinks.open{opacity:1;visibility:visible;pointer-events:auto;transform:none}
+.navlinks a{width:100%;display:flex;align-items:center;padding:10px 22px 10px 14px;font-size:15px;font-weight:700;color:var(--text);border-radius:12px;transition:background .25s,color .25s,padding-left .25s}
+.navlinks a:hover{padding-left:20px}
+.navlinks a.active{background:var(--blue-soft);color:var(--blue)}
+.navlinks a::after{display:none}
+.navlinks.open a{animation:linkIn .4s cubic-bezier(.2,.8,.2,1) both}
+.navlinks.open a:nth-child(1){animation-delay:0.050s}
+.navlinks.open a:nth-child(2){animation-delay:0.095s}
+.navlinks.open a:nth-child(3){animation-delay:0.140s}
+.navlinks.open a:nth-child(4){animation-delay:0.185s}
+.navlinks.open a:nth-child(5){animation-delay:0.230s}
+.navlinks.open a:nth-child(6){animation-delay:0.275s}
+.navlinks.open a:nth-child(7){animation-delay:0.320s}
+.navlinks.open a:nth-child(8){animation-delay:0.365s}
+@keyframes linkIn{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.menu-toggle{transition:transform .35s cubic-bezier(.2,.8,.2,1),background .25s}
+.menu-toggle.active{transform:rotate(90deg)}
+.menu-toggle{display:block}
+.hero{padding-top:130px}
+.hero-grid,.about-grid,.education-grid,.tools-grid{grid-template-columns:1fr}
+.hero-grid{gap:50px}
+.cards{grid-template-columns:1fr 1fr}
+.skills{grid-template-columns:1fr}
+.highlight-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+section{padding:80px 20px}
+.hero h1{font-size:48px;letter-spacing:-3px}
+.hero-description{font-size:16px}
+.cards{grid-template-columns:1fr}
+.experience{grid-template-columns:1fr;gap:5px}
+.contact-box{flex-direction:column;align-items:flex-start}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style>
 </head>
-
-
 <body>
 
-
-<!-- =======================================================
-     BACKGROUND
-======================================================= -->
-
 <div class="cursor-glow"></div>
-
 <div class="bg-orb orb-one"></div>
 <div class="bg-orb orb-two"></div>
 
-
-<!-- =======================================================
-     NAVIGATION
-======================================================= -->
-
+<!-- NAVIGATION -->
 <nav>
-
-    <div class="navbar">
-
-        <a href="#home" class="logo">
-            Edwin<span>.</span>
-        </a>
-
-
-        <div class="navlinks" id="navLinks">
-
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#services">
-                Services
-            </a>
-
-            <a href="#experience">
-                Experience
-            </a>
-
-            <a href="#education">
-                Education
-            </a>
-
-            <a href="#projects">
-                Projects
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-        </div>
-
-
-        <div class="nav-actions">
-
-            <button
-                class="theme-toggle"
-                id="themeToggle"
-                aria-label="Toggle dark mode">
-
-                ☾
-
-            </button>
-
-
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Open menu">
-
-                ☰
-
-            </button>
-
-        </div>
-
-    </div>
-
+<div class="navbar">
+<a href="#home" class="logo">Edwin<span>.</span></a>
+<div class="navlinks" id="navLinks">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#experience">Experience</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+<div class="nav-actions">
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+<button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+</div>
+</div>
 </nav>
 
-
-<!-- =======================================================
-     HERO
-======================================================= -->
-
-<header
-    class="hero"
-    id="home">
-
-    <div class="hero-grid">
-
-
-        <div class="reveal">
-
-            <div class="badge">
-                AVAILABLE FOR OPPORTUNITIES
-            </div>
-
-
-            <h1>
-
-                Experienced support for your
-
-                <span class="gradient-text">
-                    business.
-                </span>
-
-            </h1>
-
-
-            <p class="hero-description">
-
-                Hi, I'm <strong>Edwin Peñacuba Jr.</strong> —
-                a Warehouse & Logistics Supervisor with
-                experience in operations, technology sales,
-                customer service, documentation, data entry,
-                and administrative support.
-
-                <br><br>
-
-                I bring a practical, detail-oriented approach
-                to organizing information, managing records,
-                coordinating operations, assisting customers,
-                and keeping day-to-day business tasks on track.
-
-            </p>
-
-
-            <div class="buttons">
-
-                <a
-                    href="#contact"
-                    class="btn btn-primary">
-
-                    Let's Work Together →
-
-                </a>
-
-
-                <a
-                    href="#experience"
-                    class="btn btn-secondary">
-
-                    View Experience
-
-                </a>
-
-
-                <a
-                    href="Edwin-Penacuba-Resume.pdf"
-                    download
-                    class="btn btn-resume">
-
-                    Download Resume ↓
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- PROFILE CARD -->
-
-        <div class="profile-wrapper reveal">
-
-            <div
-                class="profile-card"
-                id="profileCard">
-
-
-                <div class="avatar">
-                    EP
-                </div>
-
-
-                <h3>
-                    Edwin Peñacuba Jr.
-                </h3>
-
-
-                <p>
-                    Warehouse & Logistics Supervisor |
-                    Operations |
-                    Administrative Support
-                </p>
-
-
-                <div class="info">
-
-
-                    <div>
-
-                        <span>
-                            Location
-                        </span>
-
-                        <strong>
-                            Bacolod City, Philippines
-                        </strong>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            Current Role
-                        </span>
-
-                        <strong>
-                            Warehouse & Logistics Supervisor
-                        </strong>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            Experience
-                        </span>
-
-                        <strong>
-                            Operations & Customer Service
-                        </strong>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            Languages
-                        </span>
-
-                        <strong>
-                            English • Tagalog • Hiligaynon
-                        </strong>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
+<!-- HERO -->
+<header class="hero" id="home">
+<div class="hero-grid">
+<div class="reveal">
+<div class="badge">AVAILABLE FOR OPPORTUNITIES</div>
+<h1>Experienced support for your <span class="gradient-text">business.</span></h1>
+<div class="typed-line">I do <span id="typed"></span><span class="caret"></span></div>
+<p class="hero-description">
+Hi, I'm <strong>Edwin Peñacuba Jr.</strong> — a Warehouse & Logistics Supervisor with experience in operations, technology sales, customer service, documentation, data entry, and administrative support.
+<br><br>
+I bring a practical, detail-oriented approach to organizing information, managing records, coordinating operations, assisting customers, and keeping day-to-day business tasks on track.
+</p>
+<div class="buttons">
+<a href="#contact" class="btn btn-primary">Let's Work Together →</a>
+<a href="#experience" class="btn btn-secondary">View Experience</a>
+<a href="Edwin-Penacuba-Resume.pdf" download class="btn btn-resume">Download Resume ↓</a>
+</div>
+</div>
+
+<div class="profile-wrapper reveal">
+<div class="float-chip chip-a">📦 Logistics</div>
+<div class="float-chip chip-b">💬 Customer Service</div>
+<div class="float-chip chip-c">📊 Data Entry</div>
+<div class="profile-card" id="profileCard">
+<div class="avatar"><img src="data:image/jpeg;base64,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" alt="Photo of Edwin Peñacuba Jr." width="120" height="120"><i class="avatar-dot"></i></div>
+<h3>Edwin Peñacuba Jr.</h3>
+<p>Warehouse & Logistics Supervisor | Operations | Administrative Support</p>
+<div class="info">
+<div><span>Location</span><strong>Bacolod City, Philippines</strong></div>
+<div><span>Current Role</span><strong>Warehouse & Logistics Supervisor</strong></div>
+<div><span>Experience</span><strong>Operations & Customer Service</strong></div>
+<div><span>Languages</span><strong>English • Tagalog • Hiligaynon</strong></div>
+</div>
+</div>
+</div>
+</div>
 </header>
 
-
-<!-- =======================================================
-     ABOUT
-======================================================= -->
-
+<!-- ABOUT -->
 <section id="about">
-
-    <div class="container">
-
-
-        <div class="section-head reveal">
-
-            <div class="eyebrow">
-                About Me
-            </div>
-
-            <h2>
-                Experienced, adaptable,
-                and detail-oriented.
-            </h2>
-
-            <p>
-                A practical professional with experience
-                across warehouse operations, logistics,
-                technology sales, and customer service.
-            </p>
-
-        </div>
-
-
-        <div class="about-grid">
-
-
-            <div class="about-text reveal">
-
-                I am an adaptable and detail-oriented
-                professional with experience in warehouse
-                and logistics operations, data entry,
-                e-commerce, technology sales, customer
-                service, and administrative work.
-
-                <br><br>
-
-                My current role as a
-                <strong>
-                    Warehouse & Logistics Supervisor
-                </strong>
-                has strengthened my ability to manage
-                inventory, documentation, receiving and
-                delivery coordination, reports, and
-                day-to-day operational concerns.
-
-                <br><br>
-
-                My previous experience as a
-                <strong>
-                    Senior Technology Sales Associate
-                </strong>
-                also developed my communication,
-                customer service, product knowledge,
-                problem-solving, and sales-support skills.
-
-                <br><br>
-
-                I am comfortable working with computers,
-                digital systems, spreadsheets, documents,
-                and online tools. I can work independently
-                while also collaborating effectively
-                with a team.
-
-            </div>
-
-
-            <div class="skills reveal">
-
-
-                <div class="skill-item">
-
-                    <div class="skill-top">
-
-                        <strong>
-                            Warehouse & Inventory
-                        </strong>
-
-                        <span>
-                            95%
-                        </span>
-
-                    </div>
-
-                    <div class="skill-bar">
-
-                        <div
-                            class="skill-fill"
-                            data-width="95%">
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="skill-item">
-
-                    <div class="skill-top">
-
-                        <strong>
-                            Data Entry & Excel
-                        </strong>
-
-                        <span>
-                            90%
-                        </span>
-
-                    </div>
-
-                    <div class="skill-bar">
-
-                        <div
-                            class="skill-fill"
-                            data-width="90%">
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="skill-item">
-
-                    <div class="skill-top">
-
-                        <strong>
-                            Documentation
-                        </strong>
-
-                        <span>
-                            95%
-                        </span>
-
-                    </div>
-
-                    <div class="skill-bar">
-
-                        <div
-                            class="skill-fill"
-                            data-width="95%">
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="skill-item">
-
-                    <div class="skill-top">
-
-                        <strong>
-                            Customer Service
-                        </strong>
-
-                        <span>
-                            90%
-                        </span>
-
-                    </div>
-
-                    <div class="skill-bar">
-
-                        <div
-                            class="skill-fill"
-                            data-width="90%">
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="skill-item">
-
-                    <div class="skill-top">
-
-                        <strong>
-                            Technology Sales
-                        </strong>
-
-                        <span>
-                            90%
-                        </span>
-
-                    </div>
-
-                    <div class="skill-bar">
-
-                        <div
-                            class="skill-fill"
-                            data-width="90%">
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="skill-item">
-
-                    <div class="skill-top">
-
-                        <strong>
-                            Web & Digital Tools
-                        </strong>
-
-                        <span>
-                            85%
-                        </span>
-
-                    </div>
-
-                    <div class="skill-bar">
-
-                        <div
-                            class="skill-fill"
-                            data-width="85%">
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- HIGHLIGHTS -->
-
-        <div class="highlight-grid">
-
-
-            <div class="highlight reveal">
-
-                <div class="highlight-number">
-                    3
-                </div>
-
-                <p>
-                    Professional Roles
-                </p>
-
-            </div>
-
-
-            <div class="highlight reveal">
-
-                <div class="highlight-number">
-                    9+
-                </div>
-
-                <p>
-                    Years Combined Experience
-                </p>
-
-            </div>
-
-
-            <div class="highlight reveal">
-
-                <div class="highlight-number">
-                    3
-                </div>
-
-                <p>
-                    Languages
-                </p>
-
-            </div>
-
-
-            <div class="highlight reveal">
-
-                <div class="highlight-number">
-                    100%
-                </div>
-
-                <p>
-                    Commitment to Accuracy
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">About Me</div>
+<h2>Experienced, adaptable, and detail-oriented.</h2>
+<p>A practical professional with experience across warehouse operations, logistics, technology sales, and customer service.</p>
+</div>
+
+<div class="about-grid">
+<div class="about-text reveal">
+I am an adaptable and detail-oriented professional with experience in warehouse and logistics operations, data entry, e-commerce, technology sales, customer service, and administrative work.
+<br><br>
+My current role as a <strong>Warehouse & Logistics Supervisor</strong> has strengthened my ability to manage inventory, documentation, receiving and delivery coordination, reports, and day-to-day operational concerns.
+<br><br>
+My previous experience as a <strong>Senior Technology Sales Associate</strong> also developed my communication, customer service, product knowledge, problem-solving, and sales-support skills.
+<br><br>
+I am comfortable working with computers, digital systems, spreadsheets, documents, and online tools. I can work independently while also collaborating effectively with a team.
+</div>
+
+<div class="skills reveal">
+<div class="skill-item"><div class="skill-top"><strong><i class="skill-ico">📦</i>Warehouse & Inventory</strong><span>95%</span></div><div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div></div>
+<div class="skill-item"><div class="skill-top"><strong><i class="skill-ico">📊</i>Data Entry & Excel</strong><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div></div>
+<div class="skill-item"><div class="skill-top"><strong><i class="skill-ico">🗂️</i>Documentation</strong><span>95%</span></div><div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div></div>
+<div class="skill-item"><div class="skill-top"><strong><i class="skill-ico">💬</i>Customer Service</strong><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div></div>
+<div class="skill-item"><div class="skill-top"><strong><i class="skill-ico">💻</i>Technology Sales</strong><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div></div>
+<div class="skill-item"><div class="skill-top"><strong><i class="skill-ico">🌐</i>Web & Digital Tools</strong><span>85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div></div>
+</div>
+</div>
+
+<div class="highlight-grid">
+<div class="highlight reveal"><div class="highlight-ico">💼</div><div class="highlight-number" data-count="3" data-suffix="">3</div><p>Professional Roles</p></div>
+<div class="highlight reveal"><div class="highlight-ico">⏳</div><div class="highlight-number" data-count="7" data-suffix="+">7+</div><p>Years Combined Experience</p></div>
+<div class="highlight reveal"><div class="highlight-ico">🗣️</div><div class="highlight-number" data-count="3" data-suffix="">3</div><p>Languages</p></div>
+<div class="highlight reveal"><div class="highlight-ico">🎯</div><div class="highlight-number" data-count="100" data-suffix="%">100%</div><p>Commitment to Accuracy</p></div>
+</div>
+</div>
 </section>
 
-
-<!-- =======================================================
-     SERVICES
-======================================================= -->
-
-<section
-    id="services"
-    class="services-section">
-
-    <div class="container">
-
-
-        <div class="section-head reveal">
-
-            <div class="eyebrow">
-                What I Can Do
-            </div>
-
-            <h2>
-                Services & Expertise
-            </h2>
-
-            <p>
-                Practical support based on real-world
-                operations, logistics, customer service,
-                technology, and administrative experience.
-            </p>
-
-        </div>
-
-
-        <div class="cards">
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    📊
-                </div>
-
-                <h3>
-                    Data Entry & Excel
-                </h3>
-
-                <p>
-                    Accurate data entry, spreadsheet
-                    management, inventory lists, data
-                    checking, sorting information, and
-                    maintaining organized records.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    📦
-                </div>
-
-                <h3>
-                    Warehouse & Inventory
-                </h3>
-
-                <p>
-                    Inventory monitoring, item checking,
-                    stock records, receiving support,
-                    documentation, labeling, and
-                    warehouse coordination.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    📁
-                </div>
-
-                <h3>
-                    Administrative Support
-                </h3>
-
-                <p>
-                    Document preparation, record keeping,
-                    reports, tracking sheets, file
-                    organization, and routine administrative
-                    tasks.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    💻
-                </div>
-
-                <h3>
-                    Technology Support
-                </h3>
-
-                <p>
-                    Technology product knowledge, customer
-                    assistance, product information,
-                    troubleshooting support, and
-                    technology-related coordination.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    💬
-                </div>
-
-                <h3>
-                    Customer Service
-                </h3>
-
-                <p>
-                    Professional communication, customer
-                    assistance, inquiries, follow-ups,
-                    issue handling, and clear service
-                    updates.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    🔎
-                </div>
-
-                <h3>
-                    Research & Online Tasks
-                </h3>
-
-                <p>
-                    Web research, information gathering,
-                    product research, comparing details,
-                    organizing findings, and preparing
-                    useful summaries.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    🛒
-                </div>
-
-                <h3>
-                    E-Commerce Support
-                </h3>
-
-                <p>
-                    Product information management,
-                    online research, order-related
-                    coordination, data organization,
-                    and digital business support.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    ✉️
-                </div>
-
-                <h3>
-                    Email & Communication
-                </h3>
-
-                <p>
-                    Professional messages, coordination,
-                    follow-ups, status updates, and
-                    communication with customers,
-                    suppliers, and teams.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    🗂️
-                </div>
-
-                <h3>
-                    Records & Documentation
-                </h3>
-
-                <p>
-                    Keeping records structured, updated,
-                    accurate, easy to retrieve, and
-                    consistent with operational requirements.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+<!-- SERVICES -->
+<section id="services" class="services-section">
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">What I Can Do</div>
+<h2>Services & Expertise</h2>
+<p>Practical support based on real-world operations, logistics, customer service, technology, and administrative experience.</p>
+</div>
+
+<div class="cards">
+<div class="card reveal"><div class="icon">📊</div><h3>Data Entry & Excel</h3><p>Accurate data entry, spreadsheet management, inventory lists, data checking, sorting information, and maintaining organized records.</p></div>
+<div class="card reveal"><div class="icon">📦</div><h3>Warehouse & Inventory</h3><p>Inventory monitoring, item checking, stock records, receiving support, documentation, labeling, and warehouse coordination.</p></div>
+<div class="card reveal"><div class="icon">📁</div><h3>Administrative Support</h3><p>Document preparation, record keeping, reports, tracking sheets, file organization, and routine administrative tasks.</p></div>
+<div class="card reveal"><div class="icon">💻</div><h3>Technology Support</h3><p>Technology product knowledge, customer assistance, product information, troubleshooting support, and technology-related coordination.</p></div>
+<div class="card reveal"><div class="icon">💬</div><h3>Customer Service</h3><p>Professional communication, customer assistance, inquiries, follow-ups, issue handling, and clear service updates.</p></div>
+<div class="card reveal"><div class="icon">🔎</div><h3>Research & Online Tasks</h3><p>Web research, information gathering, product research, comparing details, organizing findings, and preparing useful summaries.</p></div>
+<div class="card reveal"><div class="icon">🛒</div><h3>E-Commerce Support</h3><p>Product information management, online research, order-related coordination, data organization, and digital business support.</p></div>
+<div class="card reveal"><div class="icon">✉️</div><h3>Email & Communication</h3><p>Professional messages, coordination, follow-ups, status updates, and communication with customers, suppliers, and teams.</p></div>
+<div class="card reveal"><div class="icon">🗂️</div><h3>Records & Documentation</h3><p>Keeping records structured, updated, accurate, easy to retrieve, and consistent with operational requirements.</p></div>
+</div>
+</div>
 </section>
 
-
-<!-- =======================================================
-     EXPERIENCE
-======================================================= -->
-
+<!-- EXPERIENCE -->
 <section id="experience">
-
-    <div class="container">
-
-
-        <div class="section-head reveal">
-
-            <div class="eyebrow">
-                Career Background
-            </div>
-
-            <h2>
-                Professional Experience
-            </h2>
-
-            <p>
-                Experience across logistics, warehouse
-                operations, technology sales, and customer
-                service.
-            </p>
-
-        </div>
-
-
-        <div class="timeline">
-
-
-            <!-- CURRENT ROLE -->
-
-            <div class="experience reveal">
-
-
-                <div class="date">
-                    July 2026 – Present
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Warehouse & Logistics Supervisor
-                    </h3>
-
-                    <div class="company">
-                        Beyond ITECH Ventures Corporation
-                    </div>
-
-                    <p>
-                        Bacolod Warehouse, BESCA Properties,
-                        Bacolod City, Negros Occidental,
-                        Philippines
-                    </p>
-
-                    <ul>
-
-                        <li>
-                            Supervising warehouse and logistics
-                            operations.
-                        </li>
-
-                        <li>
-                            Managing inventory records,
-                            documentation, and item checking.
-                        </li>
-
-                        <li>
-                            Supporting receiving and delivery
-                            coordination.
-                        </li>
-
-                        <li>
-                            Monitoring operational concerns
-                            and discrepancies.
-                        </li>
-
-                        <li>
-                            Maintaining accurate records and
-                            organized warehouse information.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <!-- SENIOR TECHNOLOGY SALES -->
-
-            <div class="experience reveal">
-
-
-                <div class="date">
-                    May 2019 – July 2026
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Senior Technology Sales Associate
-                    </h3>
-
-                    <div class="company">
-                        Beyond ITECH Ventures Corporation
-                    </div>
-
-                    <p>
-                        Ayala Malls Capitol Central,
-                        Bacolod City, Negros Occidental,
-                        Philippines
-                    </p>
-
-                    <ul>
-
-                        <li>
-                            Assisted customers with technology
-                            products and purchasing decisions.
-                        </li>
-
-                        <li>
-                            Provided product information and
-                            customer support.
-                        </li>
-
-                        <li>
-                            Supported sales operations and
-                            daily store activities.
-                        </li>
-
-                        <li>
-                            Developed strong communication,
-                            product knowledge, and
-                            problem-solving skills.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <!-- CUSTOMER SERVICE -->
-
-            <div class="experience reveal">
-
-
-                <div class="date">
-                    March 2017 – May 2017
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Customer Service Representative
-                    </h3>
-
-                    <div class="company">
-                        MICCS Business Process Outsourcing
-                        and Marketing Inc.
-                    </div>
-
-                    <p>
-                        Mandaluyong City, Metro Manila,
-                        Philippines
-                    </p>
-
-                    <ul>
-
-                        <li>
-                            Assisted customers through
-                            professional communication.
-                        </li>
-
-                        <li>
-                            Handled customer concerns and
-                            inquiries.
-                        </li>
-
-                        <li>
-                            Developed communication,
-                            listening, and problem-solving
-                            skills.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Career Background</div>
+<h2>Professional Experience</h2>
+<p>Experience across logistics, warehouse operations, technology sales, and customer service.</p>
+</div>
+
+<div class="timeline">
+
+<div class="experience reveal">
+<div class="date">July 2026 – Present</div>
+<div>
+<h3>Warehouse & Logistics Supervisor</h3>
+<div class="company">Beyond ITECH Ventures Corporation</div>
+<p>Bacolod Warehouse, BESCA Properties, Bacolod City, Negros Occidental, Philippines</p>
+<ul>
+<li>Supervising warehouse and logistics operations.</li>
+<li>Managing inventory records, documentation, and item checking.</li>
+<li>Supporting receiving and delivery coordination.</li>
+<li>Monitoring operational concerns and discrepancies.</li>
+<li>Maintaining accurate records and organized warehouse information.</li>
+</ul>
+</div>
+</div>
+
+<div class="experience reveal">
+<div class="date">May 2019 – July 2026</div>
+<div>
+<h3>Senior Technology Sales Associate</h3>
+<div class="company">Beyond ITECH Ventures Corporation</div>
+<p>Ayala Malls Capitol Central, Bacolod City, Negros Occidental, Philippines</p>
+<ul>
+<li>Assisted customers with technology products and purchasing decisions.</li>
+<li>Provided product information and customer support.</li>
+<li>Supported sales operations and daily store activities.</li>
+<li>Developed strong communication, product knowledge, and problem-solving skills.</li>
+</ul>
+</div>
+</div>
+
+<div class="experience reveal">
+<div class="date">March 2017 – May 2017</div>
+<div>
+<h3>Customer Service Representative</h3>
+<div class="company">MICCS Business Process Outsourcing and Marketing Inc.</div>
+<p>Mandaluyong City, Metro Manila, Philippines</p>
+<ul>
+<li>Assisted customers through professional communication.</li>
+<li>Handled customer concerns and inquiries.</li>
+<li>Developed communication, listening, and problem-solving skills.</li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
 </section>
 
-
-<!-- =======================================================
-     EDUCATION & TRAINING
-======================================================= -->
-
-<section
-    id="education"
-    class="education-section">
-
-    <div class="container">
-
-
-        <div class="section-head reveal">
-
-            <div class="eyebrow">
-                Education & Training
-            </div>
-
-            <h2>
-                Education & Professional Development
-            </h2>
-
-        </div>
-
-
-        <div class="education-grid">
-
-
-            <!-- EDUCATION -->
-
-            <div class="education-card reveal">
-
-                <div class="education-icon">
-                    🎓
-                </div>
-
-                <h3>
-                    Associate in Computer Technology
-                </h3>
-
-                <div class="school">
-                    Bacolod City College
-                </div>
-
-                <div class="date-small">
-                    School Year 2018–2019
-                </div>
-
-                <p>
-                    Bacolod City, Negros Occidental,
-                    Philippines
-                </p>
-
-            </div>
-
-
-            <!-- TRAINING 1 -->
-
-            <div class="education-card reveal">
-
-                <div class="education-icon">
-                    📈
-                </div>
-
-                <h3>
-                    Sectoral Concerns & Price Monitoring Unit
-                </h3>
-
-                <div class="school">
-                    CMO-PMU
-                </div>
-
-                <div class="date-small">
-                    Office of the City Mayor —
-                    Bacolod City
-                </div>
-
-                <p>
-                    250 Hours • 2019
-                </p>
-
-                <ul class="training-list">
-
-                    <li>
-                        Accurately recorded, updated and
-                        maintained price monitoring and
-                        sectoral data using spreadsheets
-                        and databases.
-                    </li>
-
-                    <li>
-                        Verified reviewed data entries to
-                        ensure accuracy, completeness and
-                        consistency, and corrected missing
-                        information.
-                    </li>
-
-                    <li>
-                        Consolidated data and assisted in
-                        preparing reports, summaries and
-                        records while ensuring timely
-                        submission.
-                    </li>
-
-                    <li>
-                        Prepared and maintained proper file
-                        organization and documentation.
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <!-- TRAINING 2 -->
-
-            <div class="education-card reveal">
-
-                <div class="education-icon">
-                    🗣️
-                </div>
-
-                <h3>
-                    English Proficiency and Advance
-                    Call Center Training Program
-                </h3>
-
-                <div class="school">
-                    Industrial Advancement Academy of
-                    the Philippines (IAAP)
-                </div>
-
-                <div class="date-small">
-                    112 Hours • February 2017
-                </div>
-
-                <p>
-                    Intramuros, Manila, Philippines
-                </p>
-
-                <ul class="training-list">
-
-                    <li>
-                        English communication and
-                        proficiency development.
-                    </li>
-
-                    <li>
-                        Customer service and call center
-                        communication training.
-                    </li>
-
-                    <li>
-                        Professional communication and
-                        workplace interaction.
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <!-- CORE COMPETENCIES -->
-
-            <div class="education-card reveal">
-
-                <div class="education-icon">
-                    ⭐
-                </div>
-
-                <h3>
-                    Core Competencies
-                </h3>
-
-                <ul class="training-list">
-
-                    <li>
-                        Management & Leadership
-                    </li>
-
-                    <li>
-                        Creativity
-                    </li>
-
-                    <li>
-                        Adaptability & Flexibility
-                    </li>
-
-                    <li>
-                        Problem Solving
-                    </li>
-
-                    <li>
-                        Dependability
-                    </li>
-
-                    <li>
-                        Strong Work Ethic
-                    </li>
-
-                    <li>
-                        Communication & Teamwork
-                    </li>
-
-                    <li>
-                        Time Management
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
+<!-- EDUCATION & TRAINING -->
+<section id="education" class="education-section">
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Education & Training</div>
+<h2>Education & Professional Development</h2>
+</div>
+
+<div class="education-grid">
+
+<div class="education-card reveal">
+<div class="education-icon">🎓</div>
+<h3>Associate in Computer Technology</h3>
+<div class="school">Bacolod City College</div>
+<div class="date-small">School Year 2018–2019</div>
+<p>Bacolod City, Negros Occidental, Philippines</p>
+</div>
+
+<div class="education-card reveal">
+<div class="education-icon">📈</div>
+<h3>Sectoral Concerns & Price Monitoring Unit</h3>
+<div class="school">CMO-PMU</div>
+<div class="date-small">Office of the City Mayor — Bacolod City</div>
+<p>250 Hours • 2019</p>
+<ul class="training-list">
+<li>Accurately recorded, updated and maintained price monitoring and sectoral data using spreadsheets and databases.</li>
+<li>Verified reviewed data entries to ensure accuracy, completeness and consistency, and corrected missing information.</li>
+<li>Consolidated data and assisted in preparing reports, summaries and records while ensuring timely submission.</li>
+<li>Prepared and maintained proper file organization and documentation.</li>
+</ul>
+</div>
+
+<div class="education-card reveal">
+<div class="education-icon">🗣️</div>
+<h3>English Proficiency and Advance Call Center Training Program</h3>
+<div class="school">Industrial Advancement Academy of the Philippines (IAAP)</div>
+<div class="date-small">112 Hours • February 2017</div>
+<p>Intramuros, Manila, Philippines</p>
+<ul class="training-list">
+<li>English communication and proficiency development.</li>
+<li>Customer service and call center communication training.</li>
+<li>Professional communication and workplace interaction.</li>
+</ul>
+</div>
+
+<div class="education-card reveal">
+<div class="education-icon">⭐</div>
+<h3>Core Competencies</h3>
+<ul class="training-list">
+<li>Management & Leadership</li>
+<li>Creativity</li>
+<li>Adaptability & Flexibility</li>
+<li>Problem Solving</li>
+<li>Dependability</li>
+<li>Strong Work Ethic</li>
+<li>Communication & Teamwork</li>
+<li>Time Management</li>
+</ul>
+</div>
+
+</div>
+</div>
 </section>
 
-
-<!-- =======================================================
-     TECHNICAL PROFICIENCIES
-======================================================= -->
-
+<!-- TECHNICAL SKILLS -->
 <section id="skills">
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Technical Skills</div>
+<h2>Tools & Proficiencies</h2>
+</div>
 
-    <div class="container">
+<div class="cards">
+<div class="card reveal"><div class="icon">📦</div><h3>Warehouse & Inventory Management</h3><p>Inventory monitoring, stock checking, warehouse records, receiving support, item verification, and documentation.</p></div>
+<div class="card reveal"><div class="icon">📊</div><h3>Data Entry & Microsoft Excel</h3><p>Spreadsheet data entry, organization, checking, sorting, tracking sheets, and maintaining accurate records.</p></div>
+<div class="card reveal"><div class="icon">🖥️</div><h3>Warehouse Management Systems</h3><p>Experience working with digital warehouse and inventory management processes and systems.</p></div>
+<div class="card reveal"><div class="icon">🚚</div><h3>Logistics & Delivery Coordination</h3><p>Delivery coordination, receiving, operational communication, records, and logistics support.</p></div>
+<div class="card reveal"><div class="icon">🛒</div><h3>E-Commerce Order & Product Management</h3><p>Product information, online orders, product organization, and e-commerce-related administrative tasks.</p></div>
+<div class="card reveal"><div class="icon">📱</div><h3>Social Media Management</h3><p>Basic social media management, online information organization, and digital communication.</p></div>
+<div class="card reveal"><div class="icon">🎨</div><h3>Canva & Graphic Design</h3><p>Basic graphic design, visual content preparation, and business-related digital materials.</p></div>
+<div class="card reveal"><div class="icon">🌐</div><h3>Basic Web Design & Editing</h3><p>Basic HTML, CSS, website editing, content organization, and maintaining simple web pages.</p></div>
+</div>
 
+<div class="tools-wrap reveal">
+<h3 class="tools-title">Tools I Use</h3>
+<div class="tools-grid">
 
-        <div class="section-head reveal">
+<div class="tool-group">
+<h4>AI Tools</h4>
+<div class="chips">
+<span class="chip">🤖 Claude AI</span>
+<span class="chip">💡 ChatGPT</span>
+</div>
+</div>
 
-            <div class="eyebrow">
-                Technical Skills
-            </div>
+<div class="tool-group">
+<h4>Development & Web</h4>
+<div class="chips">
+<span class="chip">🐙 GitHub</span>
+<span class="chip">📈 Streamlit</span>
+</div>
+</div>
 
-            <h2>
-                Tools & Proficiencies
-            </h2>
+<div class="tool-group">
+<h4>Productivity & Communication</h4>
+<div class="chips">
+<span class="chip">📋 Trello</span>
+<span class="chip">✉️ Gmail</span>
+<span class="chip">📘 Facebook</span>
+<span class="chip">📊 Excel / Google Sheets</span>
+<span class="chip">🎨 Canva</span>
+</div>
+</div>
 
-        </div>
+<div class="tool-group">
+<h4>Business Systems</h4>
+<div class="chips">
+<span class="chip">🏭 WMS</span>
+<span class="chip">🤝 CRM Systems</span>
+<span class="chip">🛒 E-Commerce Platforms</span>
+</div>
+</div>
 
+</div>
+</div>
 
-        <div class="cards">
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    📦
-                </div>
-
-                <h3>
-                    Warehouse & Inventory Management
-                </h3>
-
-                <p>
-                    Inventory monitoring, stock checking,
-                    warehouse records, receiving support,
-                    item verification, and documentation.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    📊
-                </div>
-
-                <h3>
-                    Data Entry & Microsoft Excel
-                </h3>
-
-                <p>
-                    Spreadsheet data entry, organization,
-                    checking, sorting, tracking sheets,
-                    and maintaining accurate records.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    🖥️
-                </div>
-
-                <h3>
-                    Warehouse Management Systems
-                </h3>
-
-                <p>
-                    Experience working with digital
-                    warehouse and inventory management
-                    processes and systems.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    🚚
-                </div>
-
-                <h3>
-                    Logistics & Delivery Coordination
-                </h3>
-
-                <p>
-                    Delivery coordination, receiving,
-                    operational communication, records,
-                    and logistics support.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    🛒
-                </div>
-
-                <h3>
-                    E-Commerce Order & Product Management
-                </h3>
-
-                <p>
-                    Product information, online orders,
-                    product organization, and
-                    e-commerce-related administrative tasks.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    📱
-                </div>
-
-                <h3>
-                    Social Media Management
-                </h3>
-
-                <p>
-                    Basic social media management,
-                    online information organization,
-                    and digital communication.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    🎨
-                </div>
-
-                <h3>
-                    Canva & Graphic Design
-                </h3>
-
-                <p>
-                    Basic graphic design, visual content
-                    preparation, and business-related
-                    digital materials.
-                </p>
-
-            </div>
-
-
-            <div class="card reveal">
-
-                <div class="icon">
-                    🌐
-                </div>
-
-                <h3>
-                    Basic Web Design & Editing
-                </h3>
-
-                <p>
-                    Basic HTML, CSS, website editing,
-                    content organization, and maintaining
-                    simple web pages.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects" class="projects-section">
+<div class="container">
+<div class="section-head reveal">
+<div class="eyebrow">Sample Work</div>
+<h2>Portfolio Projects</h2>
+<p>Practical examples inspired by my experience in logistics, administration, customer service, and digital work.</p>
+</div>
 
-<!-- =======================================================
-     PROJECTS
-======================================================= -->
+<div class="cards">
 
-<section
-    id="projects"
-    class="projects-section">
+<div class="project reveal"><div class="project-content"><div><div class="project-tag">Inventory</div><h3>Inventory Tracking System</h3><p>A structured spreadsheet for monitoring item descriptions, quantities, stock status, checking, and inventory updates.</p></div><div class="project-tools">Microsoft Excel / Google Sheets</div></div></div>
 
-    <div class="container">
+<div class="project reveal"><div class="project-content"><div><div class="project-tag">Logistics</div><h3>Warehouse Operations Tracker</h3><p>A practical tracking format for receiving, deliveries, item verification, discrepancies, and operational concerns.</p></div><div class="project-tools">Excel / Documentation</div></div></div>
 
+<div class="project reveal"><div class="project-content"><div><div class="project-tag">Research</div><h3>Product & Logistics Research</h3><p>Organized research containing product information, service details, providers, locations, schedules, and comparisons.</p></div><div class="project-tools">Web Research / Excel</div></div></div>
 
-        <div class="section-head reveal">
+<div class="project reveal"><div class="project-content"><div><div class="project-tag">Administration</div><h3>Operations Report</h3><p>Structured operational reporting for inventory, receiving, deliveries, discrepancies, and daily activities.</p></div><div class="project-tools">Word / Google Docs</div></div></div>
 
-            <div class="eyebrow">
-                Sample Work
-            </div>
+<div class="project reveal"><div class="project-content"><div><div class="project-tag">Customer Service</div><h3>Customer Support Workflow</h3><p>A simple workflow for handling customer inquiries, recording concerns, providing updates, and following up professionally.</p></div><div class="project-tools">Communication / CRM Concepts</div></div></div>
 
-            <h2>
-                Portfolio Projects
-            </h2>
+<div class="project reveal"><div class="project-content"><div><div class="project-tag">Web</div><h3>Personal Portfolio Website</h3><p>A responsive personal portfolio showcasing professional experience, technical skills, services, projects, and contact information.</p></div><div class="project-tools">HTML / CSS / JavaScript</div></div></div>
 
-            <p>
-                Practical examples inspired by my
-                experience in logistics, administration,
-                customer service, and digital work.
-            </p>
-
-        </div>
-
-
-        <div class="cards">
-
-
-            <div class="project reveal">
-
-                <div class="project-content">
-
-                    <div>
-
-                        <div class="project-tag">
-                            Inventory
-                        </div>
-
-                        <h3>
-                            Inventory Tracking System
-                        </h3>
-
-                        <p>
-                            A structured spreadsheet for
-                            monitoring item descriptions,
-                            quantities, stock status,
-                            checking, and inventory updates.
-                        </p>
-
-                    </div>
-
-                    <div class="project-tools">
-                        Microsoft Excel / Google Sheets →
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="project reveal">
-
-                <div class="project-content">
-
-                    <div>
-
-                        <div class="project-tag">
-                            Logistics
-                        </div>
-
-                        <h3>
-                            Warehouse Operations Tracker
-                        </h3>
-
-                        <p>
-                            A practical tracking format for
-                            receiving, deliveries, item
-                            verification, discrepancies,
-                            and operational concerns.
-                        </p>
-
-                    </div>
-
-                    <div class="project-tools">
-                        Excel / Documentation →
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="project reveal">
-
-                <div class="project-content">
-
-                    <div>
-
-                        <div class="project-tag">
-                            Research
-                        </div>
-
-                        <h3>
-                            Product & Logistics Research
-                        </h3>
-
-                        <p>
-                            Organized research containing
-                            product information, service
-                            details, providers, locations,
-                            schedules, and comparisons.
-                        </p>
-
-                    </div>
-
-                    <div class="project-tools">
-                        Web Research / Excel →
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="project reveal">
-
-                <div class="project-content">
-
-                    <div>
-
-                        <div class="project-tag">
-                            Administration
-                        </div>
-
-                        <h3>
-                            Operations Report
-                        </h3>
-
-                        <p>
-                            Structured operational reporting
-                            for inventory, receiving,
-                            deliveries, discrepancies,
-                            and daily activities.
-                        </p>
-
-                    </div>
-
-                    <div class="project-tools">
-                        Word / Google Docs →
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="project reveal">
-
-                <div class="project-content">
-
-                    <div>
-
-                        <div class="project-tag">
-                            Customer Service
-                        </div>
-
-                        <h3>
-                            Customer Support Workflow
-                        </h3>
-
-                        <p>
-                            A simple workflow for handling
-                            customer inquiries, recording
-                            concerns, providing updates,
-                            and following up professionally.
-                        </p>
-
-                    </div>
-
-                    <div class="project-tools">
-                        Communication / CRM Concepts →
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="project reveal">
-
-                <div class="project-content">
-
-                    <div>
-
-                        <div class="project-tag">
-                            Web
-                        </div>
-
-                        <h3>
-                            Personal Portfolio Website
-                        </h3>
-
-                        <p>
-                            A responsive personal portfolio
-                            showcasing professional experience,
-                            technical skills, services,
-                            projects, and contact information.
-                        </p>
-
-                    </div>
-
-                    <div class="project-tools">
-                        HTML / CSS / JavaScript →
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
 
-
-<!-- =======================================================
-     CONTACT
-======================================================= -->
-
-<section
-    id="contact"
-    class="contact">
-
-    <div class="container">
-
-
-        <div class="contact-box reveal">
-
-
-            <div>
-
-                <div class="eyebrow">
-                    Get In Touch
-                </div>
-
-                <h2>
-                    Let's work together.
-                </h2>
-
-                <p>
-
-                    I'm open to opportunities involving
-                    Virtual Assistance, administrative
-                    support, data entry, logistics,
-                    warehouse operations, customer service,
-                    technology support, and related roles.
-
-                </p>
-
-
-                <div class="contact-details">
-
-                    <div>
-                        📞
-                        <a href="tel:+639168552232">
-                            +63 916 855 2232
-                        </a>
-                    </div>
-
-                    <div>
-                        ✉️
-                        <a
-                            href="mailto:edwinpenacubajr@gmail.com">
-                            edwinpenacubajr@gmail.com
-                        </a>
-                    </div>
-
-                    <div>
-                        📍
-                        Bacolod City, Negros Occidental,
-                        Philippines
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div>
-
-                <a
-                    href="mailto:edwinpenacubajr@gmail.com"
-                    class="btn btn-primary">
-
-                    Email Me →
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<div class="container">
+<div class="contact-box reveal">
+<div>
+<div class="eyebrow">Get In Touch</div>
+<h2>Let's work together.</h2>
+<p>I'm open to opportunities involving Virtual Assistance, administrative support, data entry, logistics, warehouse operations, customer service, technology support, and related roles.</p>
+<div class="contact-details">
+<div>📞 <a href="tel:+639168552232">+63 916 855 2232</a></div>
+<div>✉️ <a href="mailto:edwinpenacubajr@gmail.com">edwinpenacubajr@gmail.com</a></div>
+<div>📍 Bacolod City, Negros Occidental, Philippines</div>
+</div>
+</div>
+<div>
+<a href="mailto:edwinpenacubajr@gmail.com" class="btn btn-primary">Email Me →</a>
+</div>
+</div>
+</div>
 </section>
 
+<footer>© 2026 Edwin Peñacuba Jr. • Operations & Administrative Professional</footer>
 
-<!-- =======================================================
-     FOOTER
-======================================================= -->
-
-<footer>
-
-    © 2026 Edwin Peñacuba Jr.
-    • Operations & Administrative Professional
-
-</footer>
-
-
-<!-- =======================================================
-     BACK TO TOP
-======================================================= -->
-
-<button
-    class="back-top"
-    id="backTop"
-    aria-label="Back to top">
-
-    ↑
-
-</button>
-
-
-<!-- =======================================================
-     JAVASCRIPT
-======================================================= -->
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
 
 <script>
-
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-const menuToggle =
-    document.getElementById(
-        "menuToggle"
-    );
-
-const navLinks =
-    document.getElementById(
-        "navLinks"
-    );
-
-
-menuToggle.addEventListener(
-    "click",
-    () => {
-
-        navLinks.classList.toggle(
-            "open"
-        );
-
-        menuToggle.textContent =
-            navLinks.classList.contains("open")
-            ? "✕"
-            : "☰";
-
-    }
-);
-
-
-document
-    .querySelectorAll(".navlinks a")
-    .forEach(link => {
-
-        link.addEventListener(
-            "click",
-            () => {
-
-                navLinks.classList.remove(
-                    "open"
-                );
-
-                menuToggle.textContent =
-                    "☰";
-
-            }
-        );
-
+/* MOBILE MENU */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+    menuToggle.textContent = navLinks.classList.contains("open") ? "✕" : "☰";
+    menuToggle.classList.toggle("active", navLinks.classList.contains("open"));
+});
+document.querySelectorAll(".navlinks a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.textContent = "☰";
+        menuToggle.classList.remove("active");
     });
+});
 
+/* CLOSE MENU ON OUTSIDE CLICK */
+document.addEventListener("click", e => {
+    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        navLinks.classList.remove("open");
+        menuToggle.textContent = "☰";
+        menuToggle.classList.remove("active");
+    }
+});
 
-/* =========================================================
-   DARK MODE
-========================================================= */
-
-const themeToggle =
-    document.getElementById(
-        "themeToggle"
-    );
-
-
-const savedTheme =
-    localStorage.getItem(
-        "theme"
-    );
-
-
-if (
-    savedTheme === "dark"
-) {
-
-    document.documentElement
-        .setAttribute(
-            "data-theme",
-            "dark"
-        );
-
-    themeToggle.textContent =
-        "☀";
-
+/* DARK MODE (storage wrapped in try/catch) */
+const themeToggle = document.getElementById("themeToggle");
+let savedTheme = null;
+try { savedTheme = localStorage.getItem("theme"); } catch (e) {}
+if (savedTheme === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+    themeToggle.textContent = "☀";
 }
+themeToggle.addEventListener("click", () => {
+    const dark = document.documentElement.getAttribute("data-theme") === "dark";
+    if (dark) {
+        document.documentElement.removeAttribute("data-theme");
+        try { localStorage.setItem("theme", "light"); } catch (e) {}
+        themeToggle.textContent = "☾";
+    } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        try { localStorage.setItem("theme", "dark"); } catch (e) {}
+        themeToggle.textContent = "☀";
+    }
+});
 
+/* SCROLL REVEAL */
+const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+}, { threshold: .12 });
+document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
-themeToggle.addEventListener(
-    "click",
-    () => {
-
-        const dark =
-            document.documentElement
-                .getAttribute(
-                    "data-theme"
-                )
-                === "dark";
-
-
-        if (dark) {
-
-            document.documentElement
-                .removeAttribute(
-                    "data-theme"
-                );
-
-            localStorage.setItem(
-                "theme",
-                "light"
-            );
-
-            themeToggle.textContent =
-                "☾";
-
-        } else {
-
-            document.documentElement
-                .setAttribute(
-                    "data-theme",
-                    "dark"
-                );
-
-            localStorage.setItem(
-                "theme",
-                "dark"
-            );
-
-            themeToggle.textContent =
-                "☀";
-
+/* SKILL BARS */
+const skillBars = document.querySelectorAll(".skill-fill");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+skillBars.forEach(bar => {
+    const pct = bar.closest(".skill-item").querySelector(".skill-top span");
+    if (!reduceMotion) pct.textContent = "0%";
+});
+const skillObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const bar = entry.target;
+        const pct = bar.closest(".skill-item").querySelector(".skill-top span");
+        const target = parseInt(bar.dataset.width, 10);
+        bar.style.width = bar.dataset.width;
+        if (reduceMotion) { pct.textContent = target + "%"; }
+        else {
+            const start = performance.now();
+            const run = now => {
+                const t = Math.min((now - start) / 1500, 1);
+                pct.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + "%";
+                if (t < 1) requestAnimationFrame(run);
+            };
+            requestAnimationFrame(run);
         }
+        skillObserver.unobserve(bar);
+    });
+}, { threshold: .5 });
+skillBars.forEach(bar => skillObserver.observe(bar));
 
+/* STAT COUNT-UP */
+const statObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseInt(el.dataset.count, 10);
+        const suffix = el.dataset.suffix || "";
+        statObserver.unobserve(el);
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        const start = performance.now();
+        const run = now => {
+            const t = Math.min((now - start) / 1400, 1);
+            el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+            if (t < 1) requestAnimationFrame(run);
+        };
+        requestAnimationFrame(run);
+    });
+}, { threshold: .6 });
+document.querySelectorAll("[data-count]").forEach(el => {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) el.textContent = "0" + (el.dataset.suffix || "");
+    statObserver.observe(el);
+});
+
+/* MOUSE GLOW */
+const glow = document.querySelector(".cursor-glow");
+document.addEventListener("mousemove", event => {
+    glow.style.left = event.clientX + "px";
+    glow.style.top = event.clientY + "px";
+});
+
+/* 3D PROFILE CARD */
+const profileCard = document.getElementById("profileCard");
+profileCard.addEventListener("mousemove", event => {
+    if (window.innerWidth < 850) return;
+    const rect = profileCard.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const rotateX = ((y - rect.height / 2) / (rect.height / 2)) * -5;
+    const rotateY = ((x - rect.width / 2) / (rect.width / 2)) * 5;
+    profileCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+});
+profileCard.addEventListener("mouseleave", () => { profileCard.style.transform = ""; });
+
+/* BACK TO TOP */
+const backTop = document.getElementById("backTop");
+window.addEventListener("scroll", () => {
+    backTop.classList.toggle("show", window.scrollY > 500);
+});
+backTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+/* ACTIVE NAVIGATION */
+const sections = document.querySelectorAll("header[id], section[id]");
+const navigationLinks = document.querySelectorAll(".navlinks a");
+window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 150) current = section.getAttribute("id");
+    });
+    navigationLinks.forEach(link => {
+        link.classList.toggle("active", link.getAttribute("href") === "#" + current);
+    });
+});
+
+/* TYPEWRITER */
+(function () {
+    const el = document.getElementById("typed");
+    const roles = ["warehouse & logistics.", "data entry & Excel.", "customer service.", "administrative support.", "virtual assistance."];
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { el.textContent = roles[0]; return; }
+    let r = 0, c = 0, del = false;
+    function tick() {
+        const word = roles[r];
+        el.textContent = word.slice(0, c);
+        if (!del && c === word.length) { del = true; return setTimeout(tick, 1600); }
+        if (del && c === 0) { del = false; r = (r + 1) % roles.length; }
+        c += del ? -1 : 1;
+        setTimeout(tick, del ? 35 : 70);
     }
-);
-
-
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
-
-const revealElements =
-    document.querySelectorAll(
-        ".reveal"
-    );
-
-
-const revealObserver =
-    new IntersectionObserver(
-        entries => {
-
-            entries.forEach(
-                entry => {
-
-                    if (
-                        entry.isIntersecting
-                    ) {
-
-                        entry.target
-                            .classList
-                            .add("visible");
-
-                    }
-
-                }
-            );
-
-        },
-        {
-            threshold: .12
-        }
-    );
-
-
-revealElements.forEach(
-    element =>
-        revealObserver.observe(
-            element
-        )
-);
-
-
-/* =========================================================
-   SKILL BARS
-========================================================= */
-
-const skillBars =
-    document.querySelectorAll(
-        ".skill-fill"
-    );
-
-
-const skillObserver =
-    new IntersectionObserver(
-        entries => {
-
-            entries.forEach(
-                entry => {
-
-                    if (
-                        entry.isIntersecting
-                    ) {
-
-                        const width =
-                            entry.target
-                                .dataset
-                                .width;
-
-                        entry.target.style.width =
-                            width;
-
-                    }
-
-                }
-            );
-
-        },
-        {
-            threshold: .5
-        }
-    );
-
-
-skillBars.forEach(
-    bar =>
-        skillObserver.observe(
-            bar
-        )
-);
-
-
-/* =========================================================
-   MOUSE GLOW
-========================================================= */
-
-const glow =
-    document.querySelector(
-        ".cursor-glow"
-    );
-
-
-document.addEventListener(
-    "mousemove",
-    event => {
-
-        glow.style.left =
-            event.clientX + "px";
-
-        glow.style.top =
-            event.clientY + "px";
-
-    }
-);
-
-
-/* =========================================================
-   3D PROFILE CARD
-========================================================= */
-
-const profileCard =
-    document.getElementById(
-        "profileCard"
-    );
-
-
-profileCard.addEventListener(
-    "mousemove",
-    event => {
-
-        if (
-            window.innerWidth < 850
-        ) return;
-
-
-        const rect =
-            profileCard
-                .getBoundingClientRect();
-
-
-        const x =
-            event.clientX -
-            rect.left;
-
-
-        const y =
-            event.clientY -
-            rect.top;
-
-
-        const centerX =
-            rect.width / 2;
-
-
-        const centerY =
-            rect.height / 2;
-
-
-        const rotateX =
-            ((y - centerY) /
-                centerY) * -5;
-
-
-        const rotateY =
-            ((x - centerX) /
-                centerX) * 5;
-
-
-        profileCard.style.transform =
-            `rotateX(${rotateX}deg)
-             rotateY(${rotateY}deg)
-             translateY(-5px)`;
-
-    }
-);
-
-
-profileCard.addEventListener(
-    "mouseleave",
-    () => {
-
-        profileCard.style.transform =
-            "";
-
-    }
-);
-
-
-/* =========================================================
-   BACK TO TOP
-========================================================= */
-
-const backTop =
-    document.getElementById(
-        "backTop"
-    );
-
-
-window.addEventListener(
-    "scroll",
-    () => {
-
-        if (
-            window.scrollY > 500
-        ) {
-
-            backTop.classList.add(
-                "show"
-            );
-
-        } else {
-
-            backTop.classList.remove(
-                "show"
-            );
-
-        }
-
-    }
-);
-
-
-backTop.addEventListener(
-    "click",
-    () => {
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-
-        });
-
-    }
-);
-
-
-/* =========================================================
-   ACTIVE NAVIGATION
-========================================================= */
-
-const sections =
-    document.querySelectorAll(
-        "header[id], section[id]"
-    );
-
-
-const navigationLinks =
-    document.querySelectorAll(
-        ".navlinks a"
-    );
-
-
-window.addEventListener(
-    "scroll",
-    () => {
-
-        let current = "";
-
-
-        sections.forEach(
-            section => {
-
-                const sectionTop =
-                    section.offsetTop - 150;
-
-
-                if (
-                    window.scrollY >=
-                    sectionTop
-                ) {
-
-                    current =
-                        section.getAttribute(
-                            "id"
-                        );
-
-                }
-
-            }
-        );
-
-
-        navigationLinks.forEach(
-            link => {
-
-                link.classList.remove(
-                    "active"
-                );
-
-
-                if (
-                    link.getAttribute(
-                        "href"
-                    )
-                    === "#" + current
-                ) {
-
-                    link.classList.add(
-                        "active"
-                    );
-
-                }
-
-            }
-        );
-
-    }
-);
-
-
-/* =========================================================
-   CURRENT YEAR
-========================================================= */
-
-const footer =
-    document.querySelector(
-        "footer"
-    );
-
-
-footer.innerHTML =
-    `© ${new Date().getFullYear()}
-     Edwin Peñacuba Jr.
-     • Operations & Administrative Professional`;
-
-
+    tick();
+})();
+
+/* NAV SHRINK ON SCROLL */
+const mainNav = document.querySelector("nav");
+window.addEventListener("scroll", () => {
+    mainNav.classList.toggle("scrolled", window.scrollY > 40);
+});
+
+/* CURRENT YEAR */
+document.querySelector("footer").innerHTML =
+    `© ${new Date().getFullYear()} Edwin Peñacuba Jr. • Operations & Administrative Professional`;
 </script>
 
 </body>
