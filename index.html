@@ -6,13 +6,17 @@
 <meta name="description" content="Edwin Peñacuba Jr. — Entry-level Virtual Assistant with a background in warehouse operations, data entry, customer service, technology sales, and administrative support.">
 <meta name="keywords" content="Edwin Peñacuba Jr, Virtual Assistant, Warehouse Operations, Logistics, Administrative Support, Data Entry, Customer Service, Technology Sales">
 <title>Edwin Peñacuba Jr. | Operations & Virtual Assistant</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='32' y='45' font-size='36' font-weight='800' text-anchor='middle' fill='white' font-family='Arial'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='32' y='43' font-size='30' font-weight='800' text-anchor='middle' fill='white' font-family='Arial'%3EEP%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Edwin Peñacuba Jr. | Operations &amp; Virtual Assistant">
-<meta property="og:description" content="Entry-level Virtual Assistant with a background in warehouse operations, data entry, customer service, technology sales, and administrative support.">
+<meta property="og:title" content="Edwin Peñacuba Jr. | Virtual Assistant">
+<meta property="og:description" content="Detail-oriented support: admin, data entry, customer service, e-commerce and inventory.">
 <meta property="og:url" content="https://edwinpenacubajr.github.io/">
-<meta property="og:image" content="https://edwinpenacubajr.github.io/profile.jpg">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://edwinpenacubajr.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Edwin Peñacuba Jr., entry-level Virtual Assistant">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://edwinpenacubajr.github.io/og-image.png">
 <noscript><style>.reveal{opacity:1;transform:none}.skill-fill{width:100%}</style></noscript>
 <style>
 /* ROOT */
@@ -198,6 +202,23 @@ h2{font-size:clamp(34px,5vw,48px);line-height:1.1;letter-spacing:-2px;margin-top
 .education-card p{color:var(--muted);font-size:14px;margin-top:12px}
 .training-list{margin-top:15px;padding-left:20px}
 .training-list li{color:var(--muted);font-size:13px;margin-bottom:9px}
+/* FLIP CARD */
+.flip{perspective:1400px;cursor:pointer;outline:none}
+.flip:focus-visible .flip-front{border-color:var(--blue)}
+.flip-inner{position:relative;height:100%;transition:transform .8s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d}
+.flip.flipped .flip-inner{transform:rotateY(180deg)}
+.flip-front,.flip-back{backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.flip-front{height:100%}
+.flip-back{position:absolute;inset:0;transform:rotateY(180deg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center}
+.flip-back img{max-width:100%;max-height:calc(100% - 44px);object-fit:contain;border-radius:10px;border:1px solid var(--border)}
+.cert-missing{color:var(--muted);font-size:14px}
+.flip .education-card:hover{transform:none}
+.flip .flip-back:hover{transform:rotateY(180deg)}
+.flip.reveal{transition:opacity .8s ease,transform .3s ease}
+.flip.reveal.visible:hover{transform:translateY(-6px)}
+.flip:hover .education-card{border-color:rgba(37,99,235,.35)}
+.flip-hint{margin-top:14px;font-size:12px;font-weight:800;color:var(--blue)}
+.flip-back .flip-hint{margin-top:0}
 /* TOOLS */
 .tools-wrap{margin-top:50px}
 .tools-title{font-size:22px;letter-spacing:-.5px;margin-bottom:22px}
@@ -485,7 +506,9 @@ I am comfortable working with computers, digital systems, spreadsheets, document
 <p>Bacolod City, Negros Occidental, Philippines</p>
 </div>
 
-<div class="education-card reveal">
+<div class="flip reveal" id="flipCmo" role="button" tabindex="0" aria-pressed="false" aria-label="Flip card to view the certificate">
+<div class="flip-inner">
+<div class="education-card flip-front">
 <div class="education-icon">📈</div>
 <h3>Sectoral Concerns & Price Monitoring Unit</h3>
 <div class="school">CMO-PMU</div>
@@ -497,6 +520,14 @@ I am comfortable working with computers, digital systems, spreadsheets, document
 <li>Consolidated data and assisted in preparing reports, summaries and records while ensuring timely submission.</li>
 <li>Prepared and maintained proper file organization and documentation.</li>
 </ul>
+<div class="flip-hint">Click to view certificate ↻</div>
+</div>
+<div class="education-card flip-back">
+<img src="certificates/cmo-pmu-certificate.jpg" alt="Certificate of training, CMO-PMU, Office of the City Mayor, Bacolod City">
+<p class="cert-missing" hidden>Certificate image will be added soon.</p>
+<div class="flip-hint">Click to flip back ↻</div>
+</div>
+</div>
 </div>
 
 <div class="education-card reveal">
@@ -833,6 +864,23 @@ window.addEventListener("scroll", () => {
 const mainNav = document.querySelector("nav");
 window.addEventListener("scroll", () => {
     mainNav.classList.toggle("scrolled", window.scrollY > 40);
+});
+
+/* FLIP CARDS (certificates) */
+document.querySelectorAll(".flip").forEach(card => {
+    const toggle = () => {
+        const on = card.classList.toggle("flipped");
+        card.setAttribute("aria-pressed", on);
+    };
+    card.addEventListener("click", toggle);
+    card.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+    });
+    const img = card.querySelector(".flip-back img");
+    img.addEventListener("error", () => {
+        img.hidden = true;
+        card.querySelector(".cert-missing").hidden = false;
+    });
 });
 
 /* CURRENT YEAR */
