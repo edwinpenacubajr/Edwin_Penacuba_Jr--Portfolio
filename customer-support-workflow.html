@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Support Workflow (Sample) | Edwin Peñacuba Jr.</title>
+<style>
+:root{--bg:#f8fafc;--panel:#fff;--text:#0f172a;--muted:#55657a;--blue:#2563eb;--soft:#eff6ff;--border:rgba(148,163,184,.3);--shadow:rgba(15,23,42,.08)}
+@media (prefers-color-scheme:dark){:root{--bg:#020617;--panel:#0f172a;--text:#f8fafc;--muted:#94a3b8;--blue:#60a5fa;--soft:rgba(37,99,235,.15);--border:rgba(148,163,184,.2);--shadow:rgba(0,0,0,.4)}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:28px 20px 70px}
+.wrap{width:min(1180px,100%);margin:auto}
+a{color:var(--blue);font-weight:700;text-decoration:none}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.note{font-size:12px;font-weight:800;padding:7px 12px;border-radius:50px;background:var(--soft);color:var(--blue);border:1px solid var(--border)}
+.eyebrow{color:var(--blue);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:2px}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.1;letter-spacing:-2px;margin:6px 0 10px}
+.lead{color:var(--muted);max-width:700px}
+h2{font-size:24px;letter-spacing:-.5px;margin:50px 0 18px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{display:flex;gap:12px;padding:16px;background:var(--panel);border:1px solid var(--border);border-radius:16px;font-size:14px;color:var(--muted)}
+.step b{flex:none;width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:var(--blue);color:#fff;font-size:13px}
+.board{display:grid;grid-template-columns:repeat(5,minmax(220px,1fr));gap:14px;overflow-x:auto;padding-bottom:10px}
+.col{background:var(--soft);border:1px solid var(--border);border-radius:18px;padding:14px}
+.col h3{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:12px;display:flex;justify-content:space-between}
+.col h3 span{color:var(--muted)}
+.tcard{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 6px 18px var(--shadow);transition:transform .25s}
+.tcard:hover{transform:translateY(-4px)}
+.lab{display:inline-block;font-size:10px;font-weight:900;color:#fff;padding:3px 9px;border-radius:50px;margin-bottom:8px}
+.tcard h4{font-size:14px;line-height:1.35;margin-bottom:8px}
+.tcard ul{list-style:none;font-size:12px;color:var(--muted)}
+.tcard li{margin-bottom:3px}
+.tcard li.done{text-decoration:line-through;opacity:.7}
+.prog{height:5px;border-radius:5px;background:var(--border);margin-top:10px;overflow:hidden}
+.prog i{display:block;height:100%;background:linear-gradient(90deg,#2563eb,#7c3aed)}
+.temps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.temp{background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:22px}
+.temp h4{font-size:16px;margin-bottom:10px}
+.temp p{font-size:14px;color:var(--muted);background:var(--soft);padding:14px;border-radius:12px}
+.copy{margin-top:12px;padding:8px 14px;border:1px solid var(--border);background:var(--panel);color:var(--text);border-radius:10px;font-weight:700;font-size:12px;cursor:pointer}
+.copy:hover{border-color:var(--blue);color:var(--blue)}
+@media (max-width:850px){.steps,.temps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="top">
+<a href="index.html">← Back to portfolio</a>
+<span class="note">SAMPLE DATA — all names and order numbers are fictional</span>
+</div>
+
+<div class="eyebrow">Portfolio Project</div>
+<h1>Customer Support Workflow</h1>
+<p class="lead">A simple process for receiving customer concerns, replying professionally, tracking each case to resolution, and following up. Below are the steps I follow, a sample ticket board, and reply templates for common situations.</p>
+
+<h2>Workflow Steps</h2>
+<div class="steps" id="steps"></div>
+
+<h2>Sample Ticket Board</h2>
+<div class="board" id="board"></div>
+
+<h2>Reply Templates</h2>
+<div class="temps" id="temps"></div>
+
+</div>
+
+<script>
+const steps = [
+ "Receive and log the inquiry.",
+ "Reply within the target time and confirm the details.",
+ "Check the order, inventory, or delivery status.",
+ "Give a clear solution and a timeline.",
+ "Escalate if it needs a technical team or a manager.",
+ "Follow up and close the ticket."
+];
+const colors = {Delivery:"#ea580c","Order Issue":"#dc2626",Refund:"#7c3aed","Product Question":"#2563eb","Technical Support":"#16a34a"};
+const columns = [
+ {name:"New Inquiry", cards:[
+  {t:"Delivery delayed, Order #1042", l:"Delivery", c:[["Verify order details",1],["Check delivery status",0],["Reply within 1 hour",0],["Update customer",0]]},
+  {t:"Which model fits my needs? Inquiry #2210", l:"Product Question", c:[["Ask about budget and use",0],["Compare 2 or 3 options",0],["Send recommendation",0]]}]},
+ {name:"In Progress", cards:[
+  {t:"Wrong item received, Order #1038", l:"Order Issue", c:[["Ask for photo of item",1],["Confirm correct item in stock",1],["Arrange replacement",0],["Confirm with customer",0]]}]},
+ {name:"Waiting for Customer", cards:[
+  {t:"Refund request, Order #1031", l:"Refund", c:[["Confirm return eligibility",1],["Send return instructions",1],["Wait for item",0],["Process refund",0]]}]},
+ {name:"Escalated", cards:[
+  {t:"Laptop will not turn on, Order #1025", l:"Technical Support", c:[["Basic troubleshooting steps",1],["Document results",1],["Forward to technical team",1],["Follow up in 24 hours",0]]}]},
+ {name:"Resolved", cards:[
+  {t:"Delivery received, thank-you follow-up, Order #1019", l:"Delivery", c:[["Confirm delivery",1],["Ask for feedback",1],["Close ticket",1]]}]}
+];
+const templates = [
+ ["Acknowledging an inquiry","Hi [Name], thank you for contacting us. I have received your message about [issue] and I am checking it now. I will update you within [time]. If you have an order number or photo, please send it so I can help faster."],
+ ["Delayed delivery","Hi [Name], I am sorry your order [#number] has not arrived yet. I checked with our logistics team and the new expected delivery date is [date]. I will message you again once it is out for delivery. Thank you for your patience."],
+ ["Wrong or damaged item","Hi [Name], I am sorry about the problem with your order [#number]. Could you please send a photo of the item and the packaging? Once I receive it, I will arrange a replacement or refund, whichever you prefer."],
+ ["Refund request","Hi [Name], I have received your refund request for order [#number]. Please return the item using these steps: [steps]. Once we receive and check it, your refund will be processed within [number] business days."],
+ ["Follow-up after resolving","Hi [Name], I am checking that your concern about [issue] has been fully resolved. If you need anything else, just reply to this message. Thank you for choosing us."]
+];
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+document.getElementById("steps").innerHTML = steps.map((s,i)=>`<div class="step"><b>${i+1}</b><span>${esc(s)}</span></div>`).join("");
+document.getElementById("board").innerHTML = columns.map(col=>`
+ <div class="col"><h3>${col.name}<span>${col.cards.length}</span></h3>
+ ${col.cards.map(k=>{const d=k.c.filter(x=>x[1]).length;return `<div class="tcard">
+  <span class="lab" style="background:${colors[k.l]}">${k.l}</span>
+  <h4>${esc(k.t)}</h4>
+  <ul>${k.c.map(x=>`<li class="${x[1]?'done':''}">${x[1]?'☑':'☐'} ${esc(x[0])}</li>`).join("")}</ul>
+  <div class="prog"><i style="width:${Math.round(d/k.c.length*100)}%"></i></div></div>`}).join("")}
+ </div>`).join("");
+document.getElementById("temps").innerHTML = templates.map((t,i)=>`<div class="temp"><h4>${i+1}. ${esc(t[0])}</h4><p>${esc(t[1])}</p><button class="copy" data-i="${i}">Copy template</button></div>`).join("");
+document.querySelectorAll(".copy").forEach(b=>b.addEventListener("click",async()=>{
+  try { await navigator.clipboard.writeText(templates[b.dataset.i][1]); b.textContent="Copied ✓"; }
+  catch(e){ b.textContent="Select text to copy"; }
+  setTimeout(()=>b.textContent="Copy template",1800);
+}));
+</script>
+</body>
+</html>
