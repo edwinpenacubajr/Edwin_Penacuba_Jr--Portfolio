@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How I Generate a Stock Report (Sample) | Edwin Peñacuba Jr.</title>
+<style>
+:root{--bg:#f8fafc;--panel:#fff;--text:#0f172a;--muted:#55657a;--blue:#2563eb;--soft:#eff6ff;--border:rgba(148,163,184,.3);--shadow:rgba(15,23,42,.08)}
+@media (prefers-color-scheme:dark){:root{--bg:#020617;--panel:#0f172a;--text:#f8fafc;--muted:#94a3b8;--blue:#60a5fa;--soft:rgba(37,99,235,.15);--border:rgba(148,163,184,.2);--shadow:rgba(0,0,0,.4)}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:28px 20px 70px}
+.wrap{width:min(1100px,100%);margin:auto}
+a{color:var(--blue);font-weight:700;text-decoration:none}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.note{font-size:12px;font-weight:800;padding:7px 12px;border-radius:50px;background:var(--soft);color:var(--blue);border:1px solid var(--border)}
+.eyebrow{color:var(--blue);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:2px}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.1;letter-spacing:-2px;margin:6px 0 10px}
+.lead{color:var(--muted);max-width:700px}
+h2{font-size:24px;letter-spacing:-.5px;margin:48px 0 18px}
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.step{display:flex;gap:14px;padding:18px;background:var(--panel);border:1px solid var(--border);border-radius:16px;transition:transform .25s}
+.step:hover{transform:translateY(-4px)}
+.step b{flex:none;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:var(--blue);color:#fff;font-size:14px}
+.step h3{font-size:16px;margin-bottom:3px}
+.step p{font-size:14px;color:var(--muted)}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.tools span{padding:8px 14px;border-radius:50px;background:var(--soft);border:1px solid var(--border);font-size:13px;font-weight:700}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.bar input{flex:1;min-width:200px;padding:11px 14px;border-radius:11px;border:1px solid var(--border);background:var(--panel);color:var(--text);font-size:14px}
+.bar button{padding:9px 14px;border-radius:50px;border:1px solid var(--border);background:var(--panel);color:var(--text);font-weight:700;font-size:12px;cursor:pointer}
+.bar button.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+.tw{overflow-x:auto;border:1px solid var(--border);border-radius:16px;background:var(--panel)}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
+th{background:#166534;color:#fff;text-align:left;padding:12px 14px;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+td{padding:11px 14px;border-top:1px solid var(--border)}
+td.n{font-variant-numeric:tabular-nums;font-weight:700}
+.tag{font-weight:800;font-size:12px}
+.Max{color:#dc2626}.Low{color:#ea580c}.NSY{color:#7c3aed}.OK{color:#16a34a}
+@media (max-width:700px){.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="top">
+<a href="index.html">← Back to portfolio</a>
+<span class="note">SAMPLE DATA — all products and numbers are fictional</span>
+</div>
+
+<div class="eyebrow">Portfolio Project</div>
+<h1>How I Generate a Stock Report</h1>
+<p class="lead">The steps I follow to pull a stock status report from a warehouse management system, check it, and turn it into a spreadsheet the team can use. The table below is a made-up example of the finished report.</p>
+
+<h2>My Steps</h2>
+<div class="steps" id="steps"></div>
+
+<h2>What the Report Includes</h2>
+<div class="tools"><span>Product ID</span><span>Product Name</span><span>Warehouse</span><span>Balance</span><span>On Order</span><span>To Replenish</span><span>Unit</span><span>Status</span></div>
+
+<h2>Sample Report (Fictional Data)</h2>
+<div class="bar">
+<input id="q" type="search" placeholder="Search a product or ID...">
+<button class="on" data-s="">All</button><button data-s="Low">Low</button><button data-s="Max">Max</button><button data-s="Not Sold Yet">Not Sold Yet</button>
+</div>
+<div class="tw"><table><thead><tr><th>Product ID</th><th>Product Name</th><th>Warehouse</th><th>Balance</th><th>Unit</th><th>Status</th></tr></thead><tbody id="rows"></tbody></table></div>
+
+</div>
+
+<script>
+const steps = [
+ ["Open the system","Log in to the warehouse management system and open the Inventory menu."],
+ ["Go to Stock Status","Under the Status group, choose Stock Status."],
+ ["Choose the warehouse","Select the warehouse, and filter by product or lot/serial number when needed."],
+ ["Search and review","Run the search and read the list: product ID, name, balance, unit, and status."],
+ ["Check flagged items","Look at items marked Low, Max, or Not Sold Yet, and note anything that looks wrong."],
+ ["Export the report","Download the results as an Excel, PDF, or CSV file."],
+ ["Clean up in Excel","Open the file, check the numbers, and tidy the sheet so it is easy to read."],
+ ["Share and follow up","Send the report to the team and use it to plan replenishment."]
+];
+const data = [
+ ["SMP-0001","Wireless Mouse (Black)","Sample Warehouse",10,"PCS","Max"],
+ ["SMP-0002","USB-C Cable 1m","Sample Warehouse",3,"PCS","Low"],
+ ["SMP-0003","Laptop Backpack (Gray)","Sample Warehouse",8,"PCS","Max"],
+ ["SMP-0004","HDMI Cable 1.5m","Sample Warehouse",2,"PCS","Not Sold Yet"],
+ ["SMP-0005","24-inch Monitor (Black)","Sample Warehouse",5,"PCS","Not Sold Yet"],
+ ["SMP-0006","Keyboard and Mouse Combo","Sample Warehouse",9,"PCS","Max"],
+ ["SMP-0007","Portable SSD 512GB","Sample Warehouse",1,"PCS","Low"],
+ ["SMP-0008","Wired Gaming Mouse","Sample Warehouse",7,"PCS","Max"],
+ ["SMP-0009","Wireless Headset","Sample Warehouse",1,"PCS","Not Sold Yet"],
+ ["SMP-0010","Webcam 1080p","Sample Warehouse",4,"PCS","Max"],
+ ["SMP-0011","Power Strip 4-Outlet","Sample Warehouse",1,"PCS","Low"],
+ ["SMP-0012","Laptop Stand (Aluminum)","Sample Warehouse",6,"PCS","Max"]
+];
+const cls = s => s==="Not Sold Yet" ? "NSY" : s;
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+document.getElementById("steps").innerHTML = steps.map((s,i)=>`<div class="step"><b>${i+1}</b><div><h3>${esc(s[0])}</h3><p>${esc(s[1])}</p></div></div>`).join("");
+let status = "", text = "";
+function draw(){
+  const t = text.toLowerCase();
+  document.getElementById("rows").innerHTML = data.filter(r=>(!status||r[5]===status)&&(!t||(r[0]+r[1]).toLowerCase().includes(t)))
+   .map(r=>`<tr><td>${r[0]}</td><td>${esc(r[1])}</td><td>${r[2]}</td><td class="n">${r[3]}</td><td>${r[4]}</td><td><span class="tag ${cls(r[5])}">${r[5]}</span></td></tr>`).join("") || '<tr><td colspan="6">No matching items.</td></tr>';
+}
+document.getElementById("q").addEventListener("input",e=>{text=e.target.value;draw();});
+document.querySelectorAll(".bar button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".bar button").forEach(x=>x.classList.remove("on"));
+  b.classList.add("on"); status=b.dataset.s; draw();
+}));
+draw();
+</script>
+</body>
+</html>
